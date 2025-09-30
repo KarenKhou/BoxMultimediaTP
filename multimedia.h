@@ -17,7 +17,7 @@ public:
     string getFichier()const;
     void setFichier(string fichier);
 
-    virtual void sortie(ostream &s) const=0;
+    virtual void sortie(ostream &s) const;
     virtual void jouer() const = 0;
 
 

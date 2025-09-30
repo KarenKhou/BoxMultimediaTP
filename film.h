@@ -21,8 +21,23 @@ public:
         copier(tableau,nbrChapitres);
     }
 
-    ~Film() {
+    ~Film(){
         delete[] tableauDuree;
+    }
+
+    Film(const Film& from) : Video(from){
+
+        nbrChapitres = from.nbrChapitres;
+        tableauDuree = new int[nbrChapitres];
+        for (int i(0);i<nbrChapitres;i++){
+            tableauDuree[i] = from.tableauDuree[i];
+        }
+    }
+
+    Film& operator=(const Film& from){
+        Video::operator=(from);
+        if (tableauDuree && from.tableauDuree) *tableauDuree = *from.tableauDuree;
+        return *this;
     }
 
     void sortie(ostream &s) const override{
@@ -51,7 +66,7 @@ private:
     int* tableauDuree = nullptr;
     int nbrChapitres = 0;
 
-    void copier(int * tab, int taille){
+    void copier(const int * tab, int taille) {
         if (taille>0 && tab!=nullptr){
             tableauDuree = new int[taille];
             for (int i(0); i<taille; i++){

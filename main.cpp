@@ -58,6 +58,23 @@ int main(int argc, const char* argv[])
 
     f.sortie(cout);
 
+    //test partie 7
+
+    cout<<"Test partie 7"<<endl;
+    Film film1("Rita",
+     "C:/Users/User/Videos/Screen Recordings/Screen Recording 2025-04-09 184047.mp4",
+     90,
+     tab1,
+     3);
+    film1.sortie(cout);
+
+    Film film2(film1);
+    film2.sortie(cout);
+    Film film3;
+    film3 = film2;
+    film2.sortie(cout);
+
+
 
     return 0;
 }
