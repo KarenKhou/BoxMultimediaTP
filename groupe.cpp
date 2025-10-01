@@ -1,19 +1,22 @@
 #include "groupe.h"
 #include <iostream>
 #include <string>
+#include <memory>
 using namespace std;
+using ptrMulti = shared_ptr<Multimedia>;
+
 
 Groupe::Groupe(string nom) : nom(nom) {}
 
-Groupe::Groupe(const std::string& nom, std::initializer_list<Multimedia*> elems):
- std::list<Multimedia*>(elems), nom(nom) {}
+Groupe::Groupe(const std::string& nom, std::initializer_list<ptrMulti> elems):
+ std::list<ptrMulti>(elems), nom(nom) {}
 
 string Groupe::getNom() const{
     return nom;
 }
 void Groupe::afficher(std::ostream & o) const{
     o<<"Groupe: "<<nom<< " ";
-    for ( auto *elt : *this){
+    for ( ptrMulti elt : *this){
         elt->sortie(o);
     }
 }

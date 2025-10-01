@@ -3,14 +3,18 @@
 #include <list>
 #include <iostream>
 #include <string>
+#include <memory>
+
 #include "multimedia.h"
 
 using namespace std;
+using ptrMulti = shared_ptr<Multimedia>;
 
-class Groupe : public std::list<Multimedia*>
+class Groupe : public std::list<ptrMulti>
 {
 public:
-    Groupe(const std::string& nom, std::initializer_list<Multimedia*> elems);
+    using std::list<ptrMulti>::list; //question
+    Groupe(const std::string& nom, std::initializer_list<ptrMulti> elems);
 
     Groupe(string nom);
     void afficher(std::ostream & o) const;

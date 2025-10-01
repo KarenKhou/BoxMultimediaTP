@@ -9,6 +9,11 @@
 #include "Video.h"
 #include "film.h"
 #include "groupe.h"
+#include <memory>
+
+using ptrVid = std::shared_ptr<Video>;
+using ptrPhoto = std::shared_ptr<Photo>;
+
 
 using namespace std;
 
@@ -77,13 +82,13 @@ int main(int argc, const char* argv[])
 
     //test partie 8
 
-    Photo* p1= new Photo("nom photo1", "fichier 1", 10,20);
-    Photo* p2= new Photo("nom photo2", "fichier 2", 130,202);
-    Photo* p3= new Photo("nom photo3", "fichier 3", 102,203);
+    ptrPhoto p1(new Photo("nom photo1", "fichier 1", 10,20));
+    ptrPhoto p2(new Photo("nom photo2", "fichier 2", 130,202));
+    ptrPhoto p3(new Photo("nom photo3", "fichier 3", 102,203));
 
-    Video* v1= new Video("nom vid1","fichier vid1",30);
-    Video* v2= new Video ("nom vid2","fichier vid2",59);
-    Video* v3= new Video("nom vid3","fichier vid3",23);
+    ptrVid v1(new Video("nom vid1","fichier vid1",30));
+    ptrVid v2(new Video ("nom vid2","fichier vid2",59));
+    ptrVid v3(new Video("nom vid3","fichier vid3",23));
 
     Groupe g1("Photo Paris",{p1,p2,p3});
 
