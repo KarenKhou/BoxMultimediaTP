@@ -7,7 +7,10 @@ class  Video : public Multimedia{
 public:
     Video() : Multimedia() {}
 
-    Video(string nom, string fichier, int duree)
+    Video(string nom,
+        string fichier,
+        int duree
+        )
         : Multimedia(nom,fichier),duree(duree){}
 
     void sortie(ostream &s)  const override{

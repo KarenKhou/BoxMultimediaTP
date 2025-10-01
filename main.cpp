@@ -8,6 +8,7 @@
 #include "Photo.h"
 #include "Video.h"
 #include "film.h"
+#include "groupe.h"
 
 using namespace std;
 
@@ -73,6 +74,28 @@ int main(int argc, const char* argv[])
     Film film3;
     film3 = film2;
     film2.sortie(cout);
+
+    //test partie 8
+
+    Photo* p1= new Photo("nom photo1", "fichier 1", 10,20);
+    Photo* p2= new Photo("nom photo2", "fichier 2", 130,202);
+    Photo* p3= new Photo("nom photo3", "fichier 3", 102,203);
+
+    Video* v1= new Video("nom vid1","fichier vid1",30);
+    Video* v2= new Video ("nom vid2","fichier vid2",59);
+    Video* v3= new Video("nom vid3","fichier vid3",23);
+
+    Groupe g1("Photo Paris",{p1,p2,p3});
+
+    Groupe g2("Video Beirut");
+    g2.push_back(v1);
+    g2.push_back(v2);
+    g2.push_back(v3);
+
+    g1.afficher(cout);
+    g2.afficher(cout);
+
+
 
 
 
