@@ -2,6 +2,8 @@ Photo.h
 Video.h
 film.cpp
 film.h
+gestionmultimedia.cpp
+gestionmultimedia.h
 groupe.cpp
 groupe.h
 main.cpp

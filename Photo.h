@@ -3,6 +3,7 @@
 #include "multimedia.h"
 
 class  Photo : public Multimedia {
+    friend class GestionMultimedia;
 public:
     Photo(
         string nom,

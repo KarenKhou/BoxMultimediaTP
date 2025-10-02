@@ -5,6 +5,7 @@
 using namespace std;
 
 class Film :  public Video{
+    friend class GestionMultimedia;
 public:
 
     Film() : Video() {}

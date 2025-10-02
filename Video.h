@@ -4,6 +4,7 @@
 #include "multimedia.h"
 
 class  Video : public Multimedia{
+    friend class GestionMultimedia;
 public:
     Video() : Multimedia() {}
 

@@ -9,6 +9,8 @@
 #include "Video.h"
 #include "film.h"
 #include "groupe.h"
+#include "gestionmultimedia.h"
+
 #include <memory>
 
 using ptrVid = std::shared_ptr<Video>;
@@ -17,7 +19,44 @@ using ptrPhoto = std::shared_ptr<Photo>;
 
 using namespace std;
 
-int main(int argc, const char* argv[])
+
+int main() {
+    GestionMultimedia gestion;
+
+    auto photo1 = gestion.newPhoto("plage", "plage.jpg", 43, 23);
+    auto photo2 = gestion.newPhoto("montagne", "montagne.jpg", 23, 2);
+
+    auto video1 = gestion.newVideo("clip", "clip.mp4", 33);
+
+    int chapitres[] = {10, 20, 30};
+    auto film1 = gestion.newFilm("film", "film.mp4", 60, chapitres, 3);
+
+    auto groupe1 = gestion.newGroup("vacances");
+    groupe1->push_back(photo1);
+    groupe1->push_back(video1);
+
+    std::cout << "\n=== Affichage des multimédias ===" << std::endl;
+    gestion.afficher("plage",cout);
+    gestion.afficher("montagne",cout);
+    gestion.afficher("clip",cout);
+    gestion.afficher("film",cout);
+
+    std::cout << "\n=== Affichage du groupe ===" << std::endl;
+    gestion.afficher("vacances",cout);
+
+    std::cout << "\n=== Lecture multimédias ===" << std::endl;
+    gestion.jouer("clip");
+    gestion.jouer("film");
+
+    std::cout << "\n=== Recherche inexistante ===" << std::endl;
+    gestion.afficher("inconnu",cout);
+    gestion.jouer("inconnu");
+
+    return 0;
+}
+
+
+/*int main(int argc, const char* argv[])
 {
    // main partie Polymorphisme
    // attention repondre au questions
@@ -105,7 +144,7 @@ int main(int argc, const char* argv[])
 
 
     return 0;
-}
+}*/
 
 
 // g++ main.cpp Multimedia.cpp -o programme
