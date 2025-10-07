@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inf224_20gestion_20multimédia_20et_20tcp_0',['Projet INF224 - Gestion Multimédia et TCP',['../index.html',1,'']]]
+  ['jouer_0',['jouer',['../classPhoto.html#a1a1d70a0906bda3edfff9339e47802f5',1,'Photo::jouer()'],['../classVideo.html#abef3a97522b97878657ccc1eabd0af48',1,'Video::jouer()']]]
 ];

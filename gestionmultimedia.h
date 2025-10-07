@@ -15,21 +15,29 @@ using ptrFilm = shared_ptr<Film>;
 using ptrMulti = shared_ptr<Multimedia>;
 using ptrGroup = shared_ptr<Groupe>;
 
+/**
+ * @brief Classe GestionMultimedia: cette classe sert a instancier de nouveaux multimedia et
+ * les ajoutes a un dictionaire de multimedia dictMulti, et instancier de nouveaux groupes et les
+ * ajouter a dictGroup. On utilise des pointeurs intelligents pour ne pas avoir a gerer les fyites de memoires.
+ */
 class GestionMultimedia
 {
 public:
     //je dois mettre les constrcuteur des autre classe private?
     GestionMultimedia();
 
+    /// instancie de nouvelles Photos et ajoute au dictionaire
     ptrPhoto newPhoto(string nom,
                       string fichier,
                       float latitude,
                       float longitude);
 
+    /// instancie de nouvelles Videos et ajoute au dictionaire
     ptrVideo newVideo(string nom,
                       string fichier,
                       float duree);
 
+    /// instancie de nouveaux Films et ajoute au dictionaire
     ptrFilm newFilm(string nom,
                      string fichier,
                      int duree,
@@ -44,14 +52,25 @@ public:
     void afficher(string nom,ostream& s);
 
     bool jouer(string nom);
-
+    /**
+     * @brief supprimerMultimedia supprime un objet multimedia du dictionnaire dictMulti,
+     * et de tout les groupes. L'objet est detruit automatiquement car on utilise les smarts pointers.
+     * @param nom du multimedia a supprimer
+     * @return flag de succes
+     */
     bool supprimerMultimedia(const std::string& nom);
+
+    /**
+     * @brief supprimerGroup supprime un groupe du dictionnaire dictGoup
+     * @param nom Nom du groupe a supprimer
+     * @return flag de succes
+     */
     bool supprimerGroup(const std::string& nom);
 
 
 private:
-    map<string,ptrMulti> dictMultimedia;
-    map<string,ptrGroup> dictGroup;
+    map<string,ptrMulti> dictMultimedia; /// dictionnaire contenant l'integralite des multimedias
+    map<string,ptrGroup> dictGroup; ///dictionnaire contenant l'integralite des groupes.
 
 };
 

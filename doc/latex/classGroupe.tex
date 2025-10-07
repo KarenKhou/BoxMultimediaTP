@@ -2,7 +2,17 @@
 \hypertarget{classGroupe}{}\label{classGroupe}\index{Groupe@{Groupe}}
 
 
-Inheritance diagram for Groupe\+:\nopagebreak
+Classe groupe qui represente un groupe d\textquotesingle{}objet multimedia. Herite de std\+::list (template class)  
+
+
+
+
+{\ttfamily \#include $<$groupe.\+h$>$}
+
+
+
+Inheritance diagram for Groupe\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,7 +21,8 @@ Inheritance diagram for Groupe\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Groupe\+:\nopagebreak
+Collaboration diagram for Groupe\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,21 +32,40 @@ Collaboration diagram for Groupe\+:\nopagebreak
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classGroupe_a88d06a1f58fa588f75e3413a5c1e7e66}\label{classGroupe_a88d06a1f58fa588f75e3413a5c1e7e66} 
-{\bfseries Groupe} (const std\+::string \&nom, std\+::initializer\+\_\+list$<$ ptr\+Multi $>$ elems)
-\item 
+\mbox{\hyperlink{classGroupe_a88d06a1f58fa588f75e3413a5c1e7e66}{Groupe}} (const std\+::string \&nom, std\+::initializer\+\_\+list$<$ ptr\+Multi $>$ elems)
+\begin{DoxyCompactList}\small\item\em Constructeur \doxylink{classGroupe}{Groupe} qui permet l\textquotesingle{}initialisation de la forme suivante\+: \doxylink{classGroupe}{Groupe} g1("{}\+Photo Paris"{},\{p1,p2,p3\});. \end{DoxyCompactList}\item 
 \Hypertarget{classGroupe_a11b968fd03e328ddd1aa6d2d51d0afbe}\label{classGroupe_a11b968fd03e328ddd1aa6d2d51d0afbe} 
 {\bfseries Groupe} (string nom)
 \item 
 \Hypertarget{classGroupe_a26aba114595a958b0b154d04eead4d6c}\label{classGroupe_a26aba114595a958b0b154d04eead4d6c} 
 void {\bfseries afficher} (std\+::ostream \&o) const
-\item 
-\Hypertarget{classGroupe_ad3abb433f336a643fd4f014089e9dbdd}\label{classGroupe_ad3abb433f336a643fd4f014089e9dbdd} 
-bool {\bfseries supprimer} (ptr\+Multi multiasupprimer)
-\item 
+\begin{DoxyCompactList}\small\item\em fonction d\textquotesingle{}affichage d\textquotesingle{}un groupe \end{DoxyCompactList}\item 
 \Hypertarget{classGroupe_a44c2518f5d049d653f8c9e7f5a2e4aa9}\label{classGroupe_a44c2518f5d049d653f8c9e7f5a2e4aa9} 
 string {\bfseries get\+Nom} () const
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe groupe qui represente un groupe d\textquotesingle{}objet multimedia. Herite de std\+::list (template class) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGroupe_a88d06a1f58fa588f75e3413a5c1e7e66}\label{classGroupe_a88d06a1f58fa588f75e3413a5c1e7e66} 
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{Groupe()}{Groupe()}}
+{\footnotesize\ttfamily Groupe\+::\+Groupe (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nom,  }\item[{std\+::initializer\+\_\+list$<$ ptr\+Multi $>$}]{elems }\end{DoxyParamCaption})}
+
+
+
+Constructeur \doxylink{classGroupe}{Groupe} qui permet l\textquotesingle{}initialisation de la forme suivante\+: \doxylink{classGroupe}{Groupe} g1("{}\+Photo Paris"{},\{p1,p2,p3\});. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & \\
+\hline
+{\em elems} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

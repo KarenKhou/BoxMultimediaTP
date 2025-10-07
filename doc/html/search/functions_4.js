@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['photo_0',['Photo',['../classPhoto.html#a6f6f5193c29c25d755ad4ec33c23d9f8',1,'Photo']]]
+  ['multimedia_0',['Multimedia',['../classMultimedia.html#ae3a53e08011fc70a87c73ec6dd566b89',1,'Multimedia']]]
 ];

@@ -75,12 +75,17 @@ $(function() {
   <div class="headertitle"><div class="title">Groupe Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe groupe qui represente un groupe d'objet multimedia. Herite de std::list (template class)  
+ <a href="classGroupe.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="groupe_8h_source.html">groupe.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Groupe:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGroupe__inherit__graph.png" border="0" usemap="#aGroupe_inherit__map" alt="Inheritance graph"/></div>
 <map name="aGroupe_inherit__map" id="aGroupe_inherit__map">
-<area shape="rect" title=" " alt="" coords="46,79,115,104"/>
+<area shape="rect" title="Classe groupe qui represente un groupe d&#39;objet multimedia. Herite de std::list (template class)" alt="" coords="46,79,115,104"/>
 <area shape="rect" title=" " alt="" coords="5,5,156,31"/>
 <area shape="poly" title=" " alt="" coords="83,44,83,79,78,79,78,44"/>
 </map>
@@ -90,7 +95,7 @@ Collaboration diagram for Groupe:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGroupe__coll__graph.png" border="0" usemap="#aGroupe_coll__map" alt="Collaboration graph"/></div>
 <map name="aGroupe_coll__map" id="aGroupe_coll__map">
-<area shape="rect" title=" " alt="" coords="46,79,115,104"/>
+<area shape="rect" title="Classe groupe qui represente un groupe d&#39;objet multimedia. Herite de std::list (template class)" alt="" coords="46,79,115,104"/>
 <area shape="rect" title=" " alt="" coords="5,5,156,31"/>
 <area shape="poly" title=" " alt="" coords="83,44,83,79,78,79,78,44"/>
 </map>
@@ -98,22 +103,60 @@ Collaboration diagram for Groupe:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a88d06a1f58fa588f75e3413a5c1e7e66" id="r_a88d06a1f58fa588f75e3413a5c1e7e66"><td class="memItemLeft" align="right" valign="top"><a id="a88d06a1f58fa588f75e3413a5c1e7e66" name="a88d06a1f58fa588f75e3413a5c1e7e66"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Groupe</b> (const std::string &amp;nom, std::initializer_list&lt; ptrMulti &gt; elems)</td></tr>
+<tr class="memitem:a88d06a1f58fa588f75e3413a5c1e7e66" id="r_a88d06a1f58fa588f75e3413a5c1e7e66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGroupe.html#a88d06a1f58fa588f75e3413a5c1e7e66">Groupe</a> (const std::string &amp;nom, std::initializer_list&lt; ptrMulti &gt; elems)</td></tr>
+<tr class="memdesc:a88d06a1f58fa588f75e3413a5c1e7e66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur <a class="el" href="classGroupe.html" title="Classe groupe qui represente un groupe d&#39;objet multimedia. Herite de std::list (template class)">Groupe</a> qui permet l'initialisation de la forme suivante: <a class="el" href="classGroupe.html" title="Classe groupe qui represente un groupe d&#39;objet multimedia. Herite de std::list (template class)">Groupe</a> g1("Photo Paris",{p1,p2,p3});.  <br /></td></tr>
 <tr class="separator:a88d06a1f58fa588f75e3413a5c1e7e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11b968fd03e328ddd1aa6d2d51d0afbe" id="r_a11b968fd03e328ddd1aa6d2d51d0afbe"><td class="memItemLeft" align="right" valign="top"><a id="a11b968fd03e328ddd1aa6d2d51d0afbe" name="a11b968fd03e328ddd1aa6d2d51d0afbe"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Groupe</b> (string nom)</td></tr>
 <tr class="separator:a11b968fd03e328ddd1aa6d2d51d0afbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26aba114595a958b0b154d04eead4d6c" id="r_a26aba114595a958b0b154d04eead4d6c"><td class="memItemLeft" align="right" valign="top"><a id="a26aba114595a958b0b154d04eead4d6c" name="a26aba114595a958b0b154d04eead4d6c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>afficher</b> (std::ostream &amp;o) const</td></tr>
+<tr class="memdesc:a26aba114595a958b0b154d04eead4d6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction d'affichage d'un groupe <br /></td></tr>
 <tr class="separator:a26aba114595a958b0b154d04eead4d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3abb433f336a643fd4f014089e9dbdd" id="r_ad3abb433f336a643fd4f014089e9dbdd"><td class="memItemLeft" align="right" valign="top"><a id="ad3abb433f336a643fd4f014089e9dbdd" name="ad3abb433f336a643fd4f014089e9dbdd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>supprimer</b> (ptrMulti multiasupprimer)</td></tr>
-<tr class="separator:ad3abb433f336a643fd4f014089e9dbdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44c2518f5d049d653f8c9e7f5a2e4aa9" id="r_a44c2518f5d049d653f8c9e7f5a2e4aa9"><td class="memItemLeft" align="right" valign="top"><a id="a44c2518f5d049d653f8c9e7f5a2e4aa9" name="a44c2518f5d049d653f8c9e7f5a2e4aa9"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>getNom</b> () const</td></tr>
 <tr class="separator:a44c2518f5d049d653f8c9e7f5a2e4aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe groupe qui represente un groupe d'objet multimedia. Herite de std::list (template class) </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a88d06a1f58fa588f75e3413a5c1e7e66" name="a88d06a1f58fa588f75e3413a5c1e7e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88d06a1f58fa588f75e3413a5c1e7e66">&#9670;&#160;</a></span>Groupe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Groupe::Groupe </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>nom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::initializer_list&lt; ptrMulti &gt;&#160;</td>
+          <td class="paramname"><em>elems</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur <a class="el" href="classGroupe.html" title="Classe groupe qui represente un groupe d&#39;objet multimedia. Herite de std::list (template class)">Groupe</a> qui permet l'initialisation de la forme suivante: <a class="el" href="classGroupe.html" title="Classe groupe qui represente un groupe d&#39;objet multimedia. Herite de std::list (template class)">Groupe</a> g1("Photo Paris",{p1,p2,p3});. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nom</td><td></td></tr>
+    <tr><td class="paramname">elems</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="groupe_8h_source.html">groupe.h</a></li>
 <li><b>groupe.cpp</b></li>

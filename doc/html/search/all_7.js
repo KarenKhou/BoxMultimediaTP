@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['multimédia_20et_20tcp_0',['Projet INF224 - Gestion Multimédia et TCP',['../index.html',1,'']]],
-  ['multimedia_1',['multimedia',['../classMultimedia.html',1,'Multimedia'],['../classMultimedia.html#ae3a53e08011fc70a87c73ec6dd566b89',1,'Multimedia::Multimedia()']]]
+  ['newfilm_0',['newFilm',['../classGestionMultimedia.html#a63f20380cc417df3255ea562c565db09',1,'GestionMultimedia']]],
+  ['newphoto_1',['newPhoto',['../classGestionMultimedia.html#afe4dd8920f223e384287df6dbf328b57',1,'GestionMultimedia']]],
+  ['newvideo_2',['newVideo',['../classGestionMultimedia.html#a4ac3d17e5811e636e5c587b590b28075',1,'GestionMultimedia']]]
 ];

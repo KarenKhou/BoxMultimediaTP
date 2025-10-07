@@ -94,50 +94,55 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">using </span>ptrMulti = shared_ptr&lt;Multimedia&gt;;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">using </span>ptrGroup = shared_ptr&lt;Groupe&gt;;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classGestionMultimedia.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classGestionMultimedia.html">GestionMultimedia</a></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">//je dois mettre les constrcuteur des autre classe private?</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_class" href="classGestionMultimedia.html">GestionMultimedia</a>();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    ptrPhoto newPhoto(<span class="keywordtype">string</span> nom,</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                      <span class="keywordtype">string</span> fichier,</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                      <span class="keywordtype">float</span> latitude,</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                      <span class="keywordtype">float</span> longitude);</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classGestionMultimedia.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="classGestionMultimedia.html">GestionMultimedia</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">//je dois mettre les constrcuteur des autre classe private?</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_class" href="classGestionMultimedia.html">GestionMultimedia</a>();</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    ptrVideo newVideo(<span class="keywordtype">string</span> nom,</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                      <span class="keywordtype">string</span> fichier,</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                      <span class="keywordtype">float</span> duree);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    ptrFilm newFilm(<span class="keywordtype">string</span> nom,</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                     <span class="keywordtype">string</span> fichier,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                     <span class="keywordtype">int</span> duree,</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                     <span class="keywordtype">int</span>* tableau,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                     <span class="keywordtype">int</span> nbrChapitres);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    ptrGroup newGroup(<span class="keywordtype">string</span> nom);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    ptrMulti rechercherMultimedia(<span class="keywordtype">string</span> nom);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    ptrGroup rechercherGroup(<span class="keywordtype">string</span> nom);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> afficher(<span class="keywordtype">string</span> nom,ostream&amp; s);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">bool</span> jouer(<span class="keywordtype">string</span> nom);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> supprimerMultimedia(<span class="keyword">const</span> std::string&amp; nom);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">bool</span> supprimerGroup(<span class="keyword">const</span> std::string&amp; nom);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    ptrPhoto <a class="code hl_function" href="classGestionMultimedia.html#afe4dd8920f223e384287df6dbf328b57">newPhoto</a>(<span class="keywordtype">string</span> nom,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                      <span class="keywordtype">string</span> fichier,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                      <span class="keywordtype">float</span> latitude,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                      <span class="keywordtype">float</span> longitude);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    ptrVideo <a class="code hl_function" href="classGestionMultimedia.html#a4ac3d17e5811e636e5c587b590b28075">newVideo</a>(<span class="keywordtype">string</span> nom,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                      <span class="keywordtype">string</span> fichier,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                      <span class="keywordtype">float</span> duree);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    ptrFilm <a class="code hl_function" href="classGestionMultimedia.html#a63f20380cc417df3255ea562c565db09">newFilm</a>(<span class="keywordtype">string</span> nom,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                     <span class="keywordtype">string</span> fichier,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                     <span class="keywordtype">int</span> duree,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                     <span class="keywordtype">int</span>* tableau,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                     <span class="keywordtype">int</span> nbrChapitres);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    ptrGroup newGroup(<span class="keywordtype">string</span> nom);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    ptrMulti rechercherMultimedia(<span class="keywordtype">string</span> nom);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    ptrGroup rechercherGroup(<span class="keywordtype">string</span> nom);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    map&lt;string,ptrMulti&gt; dictMultimedia;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    map&lt;string,ptrGroup&gt; dictGroup;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> afficher(<span class="keywordtype">string</span> nom,ostream&amp; s);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">bool</span> jouer(<span class="keywordtype">string</span> nom);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGestionMultimedia.html#a0fcbf76f37c05ae2257d1e50b70ff9a6">supprimerMultimedia</a>(<span class="keyword">const</span> std::string&amp; nom);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGestionMultimedia.html#afa35e5beb3908204eeedd3ee67cf0a27">supprimerGroup</a>(<span class="keyword">const</span> std::string&amp; nom);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    map&lt;string,ptrMulti&gt; dictMultimedia; </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    map&lt;string,ptrGroup&gt; dictGroup; </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
 </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif </span><span class="comment">// GESTIONMULTIMEDIA_H</span></div>
-<div class="ttc" id="aclassGestionMultimedia_html"><div class="ttname"><a href="classGestionMultimedia.html">GestionMultimedia</a></div><div class="ttdef"><b>Definition</b> gestionmultimedia.h:19</div></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif </span><span class="comment">// GESTIONMULTIMEDIA_H</span></div>
+<div class="ttc" id="aclassGestionMultimedia_html"><div class="ttname"><a href="classGestionMultimedia.html">GestionMultimedia</a></div><div class="ttdoc">Classe GestionMultimedia: cette classe sert a instancier de nouveaux multimedia et les ajoutes a un d...</div><div class="ttdef"><b>Definition</b> gestionmultimedia.h:24</div></div>
+<div class="ttc" id="aclassGestionMultimedia_html_a0fcbf76f37c05ae2257d1e50b70ff9a6"><div class="ttname"><a href="classGestionMultimedia.html#a0fcbf76f37c05ae2257d1e50b70ff9a6">GestionMultimedia::supprimerMultimedia</a></div><div class="ttdeci">bool supprimerMultimedia(const std::string &amp;nom)</div><div class="ttdoc">supprimerMultimedia supprime un objet multimedia du dictionnaire dictMulti, et de tout les groupes....</div><div class="ttdef"><b>Definition</b> gestionmultimedia.cpp:95</div></div>
+<div class="ttc" id="aclassGestionMultimedia_html_a4ac3d17e5811e636e5c587b590b28075"><div class="ttname"><a href="classGestionMultimedia.html#a4ac3d17e5811e636e5c587b590b28075">GestionMultimedia::newVideo</a></div><div class="ttdeci">ptrVideo newVideo(string nom, string fichier, float duree)</div><div class="ttdoc">instancie de nouvelles Videos et ajoute au dictionaire</div><div class="ttdef"><b>Definition</b> gestionmultimedia.cpp:13</div></div>
+<div class="ttc" id="aclassGestionMultimedia_html_a63f20380cc417df3255ea562c565db09"><div class="ttname"><a href="classGestionMultimedia.html#a63f20380cc417df3255ea562c565db09">GestionMultimedia::newFilm</a></div><div class="ttdeci">ptrFilm newFilm(string nom, string fichier, int duree, int *tableau, int nbrChapitres)</div><div class="ttdoc">instancie de nouveaux Films et ajoute au dictionaire</div><div class="ttdef"><b>Definition</b> gestionmultimedia.cpp:22</div></div>
+<div class="ttc" id="aclassGestionMultimedia_html_afa35e5beb3908204eeedd3ee67cf0a27"><div class="ttname"><a href="classGestionMultimedia.html#afa35e5beb3908204eeedd3ee67cf0a27">GestionMultimedia::supprimerGroup</a></div><div class="ttdeci">bool supprimerGroup(const std::string &amp;nom)</div><div class="ttdoc">supprimerGroup supprime un groupe du dictionnaire dictGoup</div><div class="ttdef"><b>Definition</b> gestionmultimedia.cpp:85</div></div>
+<div class="ttc" id="aclassGestionMultimedia_html_afe4dd8920f223e384287df6dbf328b57"><div class="ttname"><a href="classGestionMultimedia.html#afe4dd8920f223e384287df6dbf328b57">GestionMultimedia::newPhoto</a></div><div class="ttdeci">ptrPhoto newPhoto(string nom, string fichier, float latitude, float longitude)</div><div class="ttdoc">instancie de nouvelles Photos et ajoute au dictionaire</div><div class="ttdef"><b>Definition</b> gestionmultimedia.cpp:4</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -13,6 +13,14 @@ public:
 
     Film() : Video() {}
 
+    /**
+     * @brief Film Constructeur de Film
+     * @param nom Nom du film
+     * @param fichier Chemin vers la resource
+     * @param duree Duree du film
+     * @param tableau Tableau contenant la duree de chaque chapitre du film
+     * @param nbrChapitres Nombre de chapitres dans les films
+     */
     Film(
         string nom,
         string fichier,
@@ -25,6 +33,7 @@ public:
         copier(tableau,nbrChapitres);
     }
 
+    /// Destructeur pour chaque new on doit delete pour eviter les fuites de memoires
     ~Film(){
         delete[] tableauDuree;
     }
@@ -67,7 +76,12 @@ public:
     int getnbrChapitres() const{
         return nbrChapitres;
     }
-//karen docu
+    /**
+     * @brief setTableau Setter du tableau d'un film:
+     * on detruit le tableau precedant avant de copier le tableau donne en argument dans la variable d'instance.
+     * @param tab
+     * @param taille
+     */
     void setTableau(int* tab, int taille) {
         delete[] tableauDuree;
         copier(tab, taille);
@@ -77,7 +91,12 @@ private:
 
     int* tableauDuree = nullptr; ///tableau C contenant la duree de chaque chapitre du film
     int nbrChapitres = 0; /// nombre de chapitres dans le film
-
+    /**
+     * @brief copier Fonction qui conpie un tableau donne en argument dans la variable d'instance tab.
+     * Cela protege le pointeur tab d'acces pas permis.
+     * @param tab
+     * @param taille
+     */
     void copier(const int * tab, int taille) {
         if (taille>0 && tab!=nullptr){
             tableauDuree = new int[taille];

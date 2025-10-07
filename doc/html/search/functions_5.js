@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['sortie_0',['sortie',['../classFilm.html#a6343d4b1639fd65c39803871c9ba81bf',1,'Film::sortie()'],['../classPhoto.html#a17fd4f3b21088eba908da03526aeb2c8',1,'Photo::sortie()'],['../classVideo.html#a14c15282cfbffd70839b4b6c18a9a3d8',1,'Video::sortie()']]]
+  ['newfilm_0',['newFilm',['../classGestionMultimedia.html#a63f20380cc417df3255ea562c565db09',1,'GestionMultimedia']]],
+  ['newphoto_1',['newPhoto',['../classGestionMultimedia.html#afe4dd8920f223e384287df6dbf328b57',1,'GestionMultimedia']]],
+  ['newvideo_2',['newVideo',['../classGestionMultimedia.html#a4ac3d17e5811e636e5c587b590b28075',1,'GestionMultimedia']]]
 ];

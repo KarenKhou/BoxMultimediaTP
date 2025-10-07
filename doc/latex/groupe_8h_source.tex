@@ -12,23 +12,21 @@
 \DoxyCodeLine{00009\ }
 \DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
 \DoxyCodeLine{00011\ \textcolor{keyword}{using\ }ptrMulti\ =\ shared\_ptr<Multimedia>;}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGroupe}{Groupe}}\ :\ \textcolor{keyword}{public}\ std::list<ptrMulti>}
-\DoxyCodeLine{00014\ \{}
-\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{using\ }std::list<ptrMulti>::list;\ \textcolor{comment}{//question}}
-\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classGroupe}{Groupe}}(\textcolor{keyword}{const}\ std::string\&\ nom,\ std::initializer\_list<ptrMulti>\ elems);}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classGroupe}{Groupe}}(\textcolor{keywordtype}{string}\ nom);}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ afficher(std::ostream\ \&\ o)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ supprimer(ptrMulti\ multiasupprimer);}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{string}\ getNom()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{string}\ nom\{\};}
-\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGroupe}{Groupe}}\ :\ \textcolor{keyword}{public}\ std::list<ptrMulti>}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{using\ }std::list<ptrMulti>::list;}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classGroupe}{Groupe}}(\textcolor{keyword}{const}\ std::string\&\ nom,\ std::initializer\_list<ptrMulti>\ elems);}
 \DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GROUPE\_H}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classGroupe}{Groupe}}(\textcolor{keywordtype}{string}\ nom);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGroupe_a26aba114595a958b0b154d04eead4d6c}{afficher}}(std::ostream\ \&\ o)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{string}\ getNom()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{string}\ nom\{\};\ }
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GROUPE\_H}}
 
 \end{DoxyCode}
