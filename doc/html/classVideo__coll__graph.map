@@ -1,0 +1,5 @@
+<map id="Video" name="Video">
+<area shape="rect" id="Node000001" title="Classe Video qui herite de Multimedia on declare GestionMultimedia friend, afin que cette derniere pu..." alt="" coords="24,79,83,104"/>
+<area shape="rect" id="Node000002" href="$classMultimedia.html" title="Classe multimedia abstraite, elle implemente getters et setters des attibus, et la fct sortie d&#39;affic..." alt="" coords="5,5,101,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,44,56,79,51,79,51,44"/>
+</map>

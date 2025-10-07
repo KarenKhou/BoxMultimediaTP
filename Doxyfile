@@ -1,0 +1,12 @@
+﻿
+PROJECT_NAME           = "BoxMultimediaTP"
+
+INPUT                  = .
+
+
+FILE_PATTERNS          = *.h *.cpp
+
+# Sortie HTML
+GENERATE_HTML          = YES
+OUTPUT_DIRECTORY       = doc
+

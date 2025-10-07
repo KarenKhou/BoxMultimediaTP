@@ -1,0 +1,125 @@
+\doxysection{Video Class Reference}
+\hypertarget{classVideo}{}\label{classVideo}\index{Video@{Video}}
+
+
+Classe \doxylink{classVideo}{Video} qui herite de \doxylink{classMultimedia}{Multimedia} on declare \doxylink{classGestionMultimedia}{Gestion\+Multimedia} friend, afin que cette derniere puisse acceder a son constructeur desormais prive.  
+
+
+
+
+{\ttfamily \#include $<$Video.\+h$>$}
+
+
+
+Inheritance diagram for Video\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classVideo__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Video\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classVideo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVideo_ab6e3abd52171ab351248d032957cdbde}{Video}} (string nom, string fichier, int duree)
+\begin{DoxyCompactList}\small\item\em \doxylink{classVideo}{Video}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVideo_a14c15282cfbffd70839b4b6c18a9a3d8}{sortie}} (ostream \&s) const override
+\begin{DoxyCompactList}\small\item\em sortie \+: fonction d\textquotesingle{}affichage, appelle la fct Multimedia\+::sortie(s) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVideo_abef3a97522b97878657ccc1eabd0af48}{jouer}} () const override
+\begin{DoxyCompactList}\small\item\em jouer \+: run une commande pour jouer le fichier video \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMultimedia}{Multimedia}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMultimedia_ae3a53e08011fc70a87c73ec6dd566b89}{Multimedia}} (string nom, string fichier)
+\begin{DoxyCompactList}\small\item\em constructeur \doxylink{classMultimedia}{Multimedia} \end{DoxyCompactList}\item 
+string {\bfseries get\+Nom} () const
+\item 
+void {\bfseries set\+Nom} (string name)
+\item 
+string {\bfseries get\+Fichier} () const
+\item 
+void {\bfseries set\+Fichier} (string fichier)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classVideo_ab7768bb0dc7421722ec246366de97cf4}\label{classVideo_ab7768bb0dc7421722ec246366de97cf4} 
+class {\bfseries Gestion\+Multimedia}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe \doxylink{classVideo}{Video} qui herite de \doxylink{classMultimedia}{Multimedia} on declare \doxylink{classGestionMultimedia}{Gestion\+Multimedia} friend, afin que cette derniere puisse acceder a son constructeur desormais prive. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classVideo_ab6e3abd52171ab351248d032957cdbde}\label{classVideo_ab6e3abd52171ab351248d032957cdbde} 
+\index{Video@{Video}!Video@{Video}}
+\index{Video@{Video}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{Video()}{Video()}}
+{\footnotesize\ttfamily Video\+::\+Video (\begin{DoxyParamCaption}\item[{string}]{nom,  }\item[{string}]{fichier,  }\item[{int}]{duree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classVideo}{Video}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & attibut herite de multimedia \+: nom de la photo \\
+\hline
+{\em fichier} & attibut herite de multimedia \+: chemin vers la resource \\
+\hline
+{\em duree} & duree de la video \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVideo_abef3a97522b97878657ccc1eabd0af48}\label{classVideo_abef3a97522b97878657ccc1eabd0af48} 
+\index{Video@{Video}!jouer@{jouer}}
+\index{jouer@{jouer}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{jouer()}{jouer()}}
+{\footnotesize\ttfamily void Video\+::jouer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+jouer \+: run une commande pour jouer le fichier video 
+
+
+
+Implements \mbox{\hyperlink{classMultimedia}{Multimedia}}.
+
+\Hypertarget{classVideo_a14c15282cfbffd70839b4b6c18a9a3d8}\label{classVideo_a14c15282cfbffd70839b4b6c18a9a3d8} 
+\index{Video@{Video}!sortie@{sortie}}
+\index{sortie@{sortie}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{sortie()}{sortie()}}
+{\footnotesize\ttfamily void Video\+::sortie (\begin{DoxyParamCaption}\item[{ostream \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+sortie \+: fonction d\textquotesingle{}affichage, appelle la fct Multimedia\+::sortie(s) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \+: reference vers un stream de donnees \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classMultimedia}{Multimedia}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Video.\+h\end{DoxyCompactItemize}

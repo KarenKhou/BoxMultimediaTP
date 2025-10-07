@@ -1,0 +1,55 @@
+\doxysection{Photo.\+h}
+\hypertarget{Photo_8h_source}{}\label{Photo_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PHOTO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PHOTO\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}multimedia.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ \ }\mbox{\hyperlink{classPhoto}{Photo}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMultimedia}{Multimedia}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGestionMultimedia}{GestionMultimedia}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classPhoto_a6f6f5193c29c25d755ad4ec33c23d9f8}{Photo}}(}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ nom,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ fichier,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ latitude,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ longitude}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ )\ :}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMultimedia}{Multimedia}}(nom,fichier),}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ latitude(latitude),}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ longitude(longitude)}
+\DoxyCodeLine{00029\ \ \ \ \ \{\}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ getLongitude()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ longitude;}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ getLatitude()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ latitude;}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ setLatitude(\textcolor{keywordtype}{float}\ latitude)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ this-\/>latitude\ =\ latitude;}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ setLongitude\ (\textcolor{keywordtype}{float}\ longitude)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ this-\/>longitude\ =\ longitude;}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPhoto_a17fd4f3b21088eba908da03526aeb2c8}{sortie}}(ostream\ \&s)\textcolor{keyword}{\ \ const\ override}\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ Multimedia::sortie(s);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ s\ <<\ \textcolor{stringliteral}{"{}Latitude\ :\ "{}}\ <<\ latitude\ <<\ \ \textcolor{stringliteral}{"{}\ Longitude:\ "{}}<<\ longitude<<\ \ endl;}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPhoto_a1a1d70a0906bda3edfff9339e47802f5}{jouer}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ std::string\ command\ =\ \textcolor{stringliteral}{"{}imagej\ \(\backslash\)"{}"{}}\ +\ this-\/>getFichier()\ +\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ \&"{}};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Running:\ "{}}\ <<\ command\ <<\ std::endl;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ system(command.data());}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{float}\ latitude\{\};\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{float}\ \ longitude\{\};\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PHOTO\_H}}
+
+\end{DoxyCode}

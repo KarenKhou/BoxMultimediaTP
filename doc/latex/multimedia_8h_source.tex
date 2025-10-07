@@ -1,0 +1,33 @@
+\doxysection{multimedia.\+h}
+\hypertarget{multimedia_8h_source}{}\label{multimedia_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MULTIMEDIA\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MULTIMEDIA\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMultimedia}{Multimedia}}}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classMultimedia}{Multimedia}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classMultimedia}{Multimedia}}(\textcolor{keywordtype}{string}\ nom,\ \textcolor{keywordtype}{string}\ fichier);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classMultimedia}{\string~Multimedia}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{string}\ getNom()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ setNom(\textcolor{keywordtype}{string}\ name);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{string}\ getFichier()\textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ setFichier(\textcolor{keywordtype}{string}\ fichier);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ sortie(ostream\ \&s)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ jouer()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{string}\ nom\{\};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{string}\ fichier\{\};}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MULTIMEDIA\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,139 @@
+\doxysection{Photo Class Reference}
+\hypertarget{classPhoto}{}\label{classPhoto}\index{Photo@{Photo}}
+
+
+Classe \doxylink{classPhoto}{Photo} qui herite de \doxylink{classMultimedia}{Multimedia}, on declare \doxylink{classGestionMultimedia}{Gestion\+Multimedia} friend, afin que cette derniere puisse acceder a son constructeur desormais prive.  
+
+
+
+
+{\ttfamily \#include $<$Photo.\+h$>$}
+
+
+
+Inheritance diagram for Photo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classPhoto__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Photo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classPhoto__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPhoto_a6f6f5193c29c25d755ad4ec33c23d9f8}{Photo}} (string nom, string fichier, float latitude, float longitude)
+\begin{DoxyCompactList}\small\item\em Constructeur de \doxylink{classPhoto}{Photo}. \end{DoxyCompactList}\item 
+\Hypertarget{classPhoto_a5410155fe937b7ccc21d6335d8fc7e2c}\label{classPhoto_a5410155fe937b7ccc21d6335d8fc7e2c} 
+float {\bfseries get\+Longitude} () const
+\item 
+\Hypertarget{classPhoto_ab5210f7e59cebdd09bb470bd10455c8a}\label{classPhoto_ab5210f7e59cebdd09bb470bd10455c8a} 
+float {\bfseries get\+Latitude} () const
+\item 
+\Hypertarget{classPhoto_afcef9aedae7e9a33c92282597221c121}\label{classPhoto_afcef9aedae7e9a33c92282597221c121} 
+void {\bfseries set\+Latitude} (float latitude)
+\item 
+\Hypertarget{classPhoto_a06617ad1dc4c7d5db689b10ec26deb4b}\label{classPhoto_a06617ad1dc4c7d5db689b10ec26deb4b} 
+void {\bfseries set\+Longitude} (float longitude)
+\item 
+void \mbox{\hyperlink{classPhoto_a17fd4f3b21088eba908da03526aeb2c8}{sortie}} (ostream \&s) const override
+\begin{DoxyCompactList}\small\item\em sortie \+: fonction d\textquotesingle{}affichage, appelle la fct Multimedia\+::sortie(s) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPhoto_a1a1d70a0906bda3edfff9339e47802f5}{jouer}} () const override
+\begin{DoxyCompactList}\small\item\em jouer \+: run une commande pour jouer le fichier photo \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMultimedia}{Multimedia}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMultimedia_ae3a53e08011fc70a87c73ec6dd566b89}{Multimedia}} (string nom, string fichier)
+\begin{DoxyCompactList}\small\item\em constructeur \doxylink{classMultimedia}{Multimedia} \end{DoxyCompactList}\item 
+string {\bfseries get\+Nom} () const
+\item 
+void {\bfseries set\+Nom} (string name)
+\item 
+string {\bfseries get\+Fichier} () const
+\item 
+void {\bfseries set\+Fichier} (string fichier)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classPhoto_ab7768bb0dc7421722ec246366de97cf4}\label{classPhoto_ab7768bb0dc7421722ec246366de97cf4} 
+class {\bfseries Gestion\+Multimedia}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe \doxylink{classPhoto}{Photo} qui herite de \doxylink{classMultimedia}{Multimedia}, on declare \doxylink{classGestionMultimedia}{Gestion\+Multimedia} friend, afin que cette derniere puisse acceder a son constructeur desormais prive. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPhoto_a6f6f5193c29c25d755ad4ec33c23d9f8}\label{classPhoto_a6f6f5193c29c25d755ad4ec33c23d9f8} 
+\index{Photo@{Photo}!Photo@{Photo}}
+\index{Photo@{Photo}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{Photo()}{Photo()}}
+{\footnotesize\ttfamily Photo\+::\+Photo (\begin{DoxyParamCaption}\item[{string}]{nom,  }\item[{string}]{fichier,  }\item[{float}]{latitude,  }\item[{float}]{longitude }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur de \doxylink{classPhoto}{Photo}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & attibut herite de multimedia \+: nom de la photo \\
+\hline
+{\em fichier} & attibut herite de multimedia \+: chemin vers la resource \\
+\hline
+{\em latitude} & latitude de la photo \\
+\hline
+{\em longitude} & longitude de la photo \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPhoto_a1a1d70a0906bda3edfff9339e47802f5}\label{classPhoto_a1a1d70a0906bda3edfff9339e47802f5} 
+\index{Photo@{Photo}!jouer@{jouer}}
+\index{jouer@{jouer}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{jouer()}{jouer()}}
+{\footnotesize\ttfamily void Photo\+::jouer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+jouer \+: run une commande pour jouer le fichier photo 
+
+
+
+Implements \mbox{\hyperlink{classMultimedia}{Multimedia}}.
+
+\Hypertarget{classPhoto_a17fd4f3b21088eba908da03526aeb2c8}\label{classPhoto_a17fd4f3b21088eba908da03526aeb2c8} 
+\index{Photo@{Photo}!sortie@{sortie}}
+\index{sortie@{sortie}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{sortie()}{sortie()}}
+{\footnotesize\ttfamily void Photo\+::sortie (\begin{DoxyParamCaption}\item[{ostream \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+sortie \+: fonction d\textquotesingle{}affichage, appelle la fct Multimedia\+::sortie(s) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \+: reference vers un stream de donnees \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classMultimedia}{Multimedia}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Photo.\+h\end{DoxyCompactItemize}

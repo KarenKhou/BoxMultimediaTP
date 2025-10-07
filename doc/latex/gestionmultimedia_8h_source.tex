@@ -1,0 +1,63 @@
+\doxysection{gestionmultimedia.\+h}
+\hypertarget{gestionmultimedia_8h_source}{}\label{gestionmultimedia_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GESTIONMULTIMEDIA\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GESTIONMULTIMEDIA\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}multimedia.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}groupe.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Photo.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Video.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}film.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ }ptrPhoto\ =\ shared\_ptr<Photo>;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ }ptrVideo\ =\ shared\_ptr<Video>;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }ptrFilm\ =\ shared\_ptr<Film>;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ }ptrMulti\ =\ shared\_ptr<Multimedia>;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ }ptrGroup\ =\ shared\_ptr<Groupe>;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGestionMultimedia}{GestionMultimedia}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//je\ dois\ mettre\ les\ constrcuteur\ des\ autre\ classe\ private?}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classGestionMultimedia}{GestionMultimedia}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ ptrPhoto\ newPhoto(\textcolor{keywordtype}{string}\ nom,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ fichier,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ latitude,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ longitude);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ ptrVideo\ newVideo(\textcolor{keywordtype}{string}\ nom,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ fichier,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ duree);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ ptrFilm\ newFilm(\textcolor{keywordtype}{string}\ nom,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ fichier,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ duree,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}*\ tableau,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nbrChapitres);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ ptrGroup\ newGroup(\textcolor{keywordtype}{string}\ nom);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ ptrMulti\ rechercherMultimedia(\textcolor{keywordtype}{string}\ nom);}
+\DoxyCodeLine{00042\ \ \ \ \ ptrGroup\ rechercherGroup(\textcolor{keywordtype}{string}\ nom);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ afficher(\textcolor{keywordtype}{string}\ nom,ostream\&\ s);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ jouer(\textcolor{keywordtype}{string}\ nom);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ supprimerMultimedia(\textcolor{keyword}{const}\ std::string\&\ nom);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ supprimerGroup(\textcolor{keyword}{const}\ std::string\&\ nom);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ \ map<string,ptrMulti>\ dictMultimedia;}
+\DoxyCodeLine{00054\ \ \ \ \ map<string,ptrGroup>\ dictGroup;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GESTIONMULTIMEDIA\_H}}
+
+\end{DoxyCode}

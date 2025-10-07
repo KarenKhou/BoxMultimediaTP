@@ -1,0 +1,94 @@
+\doxysection{Multimedia Class Reference}
+\hypertarget{classMultimedia}{}\label{classMultimedia}\index{Multimedia@{Multimedia}}
+
+
+Classe multimedia abstraite, elle implemente getters et setters des attibus, et la fct sortie d\textquotesingle{}affichage, la fct jouer est virtuelle pour appliquer le polymorphisme.  
+
+
+
+
+{\ttfamily \#include $<$multimedia.\+h$>$}
+
+
+
+Inheritance diagram for Multimedia\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classMultimedia__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMultimedia_ae3a53e08011fc70a87c73ec6dd566b89}{Multimedia}} (string nom, string fichier)
+\begin{DoxyCompactList}\small\item\em constructeur \doxylink{classMultimedia}{Multimedia} \end{DoxyCompactList}\item 
+\Hypertarget{classMultimedia_a8f25330477116bc336c2f11ef08649ed}\label{classMultimedia_a8f25330477116bc336c2f11ef08649ed} 
+string {\bfseries get\+Nom} () const
+\item 
+\Hypertarget{classMultimedia_a9736c82de636033b8904b0539ac15dfd}\label{classMultimedia_a9736c82de636033b8904b0539ac15dfd} 
+void {\bfseries set\+Nom} (string name)
+\item 
+\Hypertarget{classMultimedia_aef84d25acdeaa44a98d59d84df3466e3}\label{classMultimedia_aef84d25acdeaa44a98d59d84df3466e3} 
+string {\bfseries get\+Fichier} () const
+\item 
+\Hypertarget{classMultimedia_aad6fdf3c1675ded3faf05d248504e52f}\label{classMultimedia_aad6fdf3c1675ded3faf05d248504e52f} 
+void {\bfseries set\+Fichier} (string fichier)
+\item 
+virtual void \mbox{\hyperlink{classMultimedia_aa6ce839ef65a58b11dc96c66b68cd0e2}{sortie}} (ostream \&s) const
+\item 
+virtual void \mbox{\hyperlink{classMultimedia_af8e041ff12c7439019a491a4fc863110}{jouer}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe multimedia abstraite, elle implemente getters et setters des attibus, et la fct sortie d\textquotesingle{}affichage, la fct jouer est virtuelle pour appliquer le polymorphisme. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMultimedia_ae3a53e08011fc70a87c73ec6dd566b89}\label{classMultimedia_ae3a53e08011fc70a87c73ec6dd566b89} 
+\index{Multimedia@{Multimedia}!Multimedia@{Multimedia}}
+\index{Multimedia@{Multimedia}!Multimedia@{Multimedia}}
+\doxysubsubsection{\texorpdfstring{Multimedia()}{Multimedia()}}
+{\footnotesize\ttfamily Multimedia\+::\+Multimedia (\begin{DoxyParamCaption}\item[{string}]{nom,  }\item[{string}]{fichier }\end{DoxyParamCaption})}
+
+
+
+constructeur \doxylink{classMultimedia}{Multimedia} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & Nom de l\textquotesingle{}objet \\
+\hline
+{\em fichier} & Chemin vers la resource \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMultimedia_af8e041ff12c7439019a491a4fc863110}\label{classMultimedia_af8e041ff12c7439019a491a4fc863110} 
+\index{Multimedia@{Multimedia}!jouer@{jouer}}
+\index{jouer@{jouer}!Multimedia@{Multimedia}}
+\doxysubsubsection{\texorpdfstring{jouer()}{jouer()}}
+{\footnotesize\ttfamily virtual void Multimedia\+::jouer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classPhoto_a1a1d70a0906bda3edfff9339e47802f5}{Photo}}, and \mbox{\hyperlink{classVideo_abef3a97522b97878657ccc1eabd0af48}{Video}}.
+
+\Hypertarget{classMultimedia_aa6ce839ef65a58b11dc96c66b68cd0e2}\label{classMultimedia_aa6ce839ef65a58b11dc96c66b68cd0e2} 
+\index{Multimedia@{Multimedia}!sortie@{sortie}}
+\index{sortie@{sortie}!Multimedia@{Multimedia}}
+\doxysubsubsection{\texorpdfstring{sortie()}{sortie()}}
+{\footnotesize\ttfamily void Multimedia\+::sortie (\begin{DoxyParamCaption}\item[{ostream \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classFilm_a6343d4b1639fd65c39803871c9ba81bf}{Film}}, \mbox{\hyperlink{classPhoto_a17fd4f3b21088eba908da03526aeb2c8}{Photo}}, and \mbox{\hyperlink{classVideo_a14c15282cfbffd70839b4b6c18a9a3d8}{Video}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+multimedia.\+h\item 
+multimedia.\+cpp\end{DoxyCompactItemize}

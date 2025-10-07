@@ -1,0 +1,36 @@
+\doxysection{Video.\+h}
+\hypertarget{Video_8h_source}{}\label{Video_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VIDEO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VIDEO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}multimedia.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ \ }\mbox{\hyperlink{classVideo}{Video}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMultimedia}{Multimedia}}\{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGestionMultimedia}{GestionMultimedia}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classVideo}{Video}}()\ :\ \mbox{\hyperlink{classMultimedia}{Multimedia}}()\ \{\}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classVideo_ab6e3abd52171ab351248d032957cdbde}{Video}}(\textcolor{keywordtype}{string}\ nom,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ fichier,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ duree}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ )}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classMultimedia}{Multimedia}}(nom,fichier),duree(duree)\{\}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVideo_a14c15282cfbffd70839b4b6c18a9a3d8}{sortie}}(ostream\ \&s)\textcolor{keyword}{\ \ const\ override}\{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ Multimedia::sortie(s);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ s\ <<\ \textcolor{stringliteral}{"{}Duree\ :\ "{}}\ <<\ duree\ <<\ endl;}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVideo_abef3a97522b97878657ccc1eabd0af48}{jouer}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::string\ command\ =\ \textcolor{stringliteral}{"{}mpv\ \(\backslash\)"{}"{}}\ +\ this-\/>getFichier()\ +\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ \&"{}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Running:\ "{}}\ <<\ command\ <<\ std::endl;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ system(command.data());}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ duree;\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -4,11 +4,45 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * @mainpage TP - Gestion Multimédia et TCP
+ *
+ * @section  Introduction
+ *
+ * Ce projet a été réalisé dans le cadre du cours **INF224**.
+ * Il implémente une application orientée objet permettant de :
+ * - Gérer des objets multimédia (photos, vidéos, films)
+ * - Les regrouper dans des collections (groupes)
+ * - Communiquer avec un client distant via un serveur TCP
+ *
+ * Le code est intégralement en **C++**
+ *
+ * @section archi_sec Architecture
+ *
+ * Le projet est structuré autour des classes principales :
+ *
+ *
+ * @section authors_sec Auteurs
+ * - Karen El Khoury
+ *
+ * @section date_sec Date
+ * septembre-octobre 2025
+ */
 
+
+/**
+ * @brief Classe multimedia abstraite, elle implemente getters et setters des attibus, et la fct sortie d'affichage,
+ * la fct jouer est virtuelle pour appliquer le polymorphisme
+ */
 class Multimedia
 {
 public:
     Multimedia();
+    /**
+     * @brief constructeur Multimedia
+     * @param nom Nom de l'objet
+     * @param fichier Chemin vers la resource
+     */
     Multimedia(string nom, string fichier);
     virtual ~Multimedia() = default;
 
