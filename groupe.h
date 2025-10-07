@@ -18,7 +18,7 @@ public:
 
     Groupe(string nom);
     void afficher(std::ostream & o) const;
-
+    bool supprimer(ptrMulti multiasupprimer);
     string getNom() const;
 
 

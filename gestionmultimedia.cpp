@@ -45,6 +45,7 @@ ptrMulti GestionMultimedia::rechercherMultimedia(string nom){
         return it->second;
     }
 }
+
 ptrGroup GestionMultimedia::rechercherGroup(string nom){
     auto it = dictGroup.find(nom);
     if (it == dictGroup.end()) {
@@ -56,13 +57,11 @@ ptrGroup GestionMultimedia::rechercherGroup(string nom){
 }
 
 void GestionMultimedia::afficher(string nom, ostream& s){
-    ptrGroup group = GestionMultimedia::rechercherGroup(nom);
-    if (group != nullptr) {
+    if (auto group =rechercherGroup(nom)){
         group->afficher(s);
         return;
     }
-    ptrMulti multi = GestionMultimedia::rechercherMultimedia(nom);
-    if (multi != nullptr) {
+    if (auto multi = rechercherMultimedia(nom)){
         multi->sortie(s);
         return;
     }
@@ -70,18 +69,40 @@ void GestionMultimedia::afficher(string nom, ostream& s){
 }
 
 bool GestionMultimedia::jouer(string nom){
-    ptrGroup group = GestionMultimedia::rechercherGroup(nom);
-    if (group != nullptr) {
+    if (auto group = rechercherGroup(nom)){
         for (auto& multi : *group) {
             multi->jouer();
         }
-
         return true;
     }
-    ptrMulti multi = GestionMultimedia::rechercherMultimedia(nom);
-    if (multi != nullptr) {
+    if(auto multi = rechercherMultimedia(nom)){
         multi->jouer();
         return true;
     }
     return false;
 }
+
+bool GestionMultimedia::supprimerGroup(const std::string& nom){
+    auto it = dictGroup.find(nom);
+    if(it != dictGroup.end()){
+        (it->second)->clear();
+        dictGroup.erase(it);
+        return true;
+    }
+    return false;
+}
+
+bool GestionMultimedia::supprimerMultimedia(const std::string& nom){
+    auto it = dictMultimedia.find(nom);
+    if(it != dictMultimedia.end()){
+        ptrMulti multiasupprimer = it->second;
+        for (auto &it2 : dictGroup){
+            ptrGroup grp = it2.second;
+            grp->remove(multiasupprimer);
+        }
+        dictMultimedia.erase(it);
+        return true;
+    }
+    return false;
+}
+

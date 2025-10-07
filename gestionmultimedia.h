@@ -18,7 +18,7 @@ using ptrGroup = shared_ptr<Groupe>;
 class GestionMultimedia
 {
 public:
-    //je dois mettre les constrcuteur des autre vclasse private?
+    //je dois mettre les constrcuteur des autre classe private?
     GestionMultimedia();
 
     ptrPhoto newPhoto(string nom,

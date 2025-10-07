@@ -35,23 +35,37 @@ int main() {
     groupe1->push_back(photo1);
     groupe1->push_back(video1);
 
-    std::cout << "\n=== Affichage des multimédias ===" << std::endl;
+    std::cout << "Affichage des multimédias" << std::endl;
     gestion.afficher("plage",cout);
     gestion.afficher("montagne",cout);
     gestion.afficher("clip",cout);
     gestion.afficher("film",cout);
 
-    std::cout << "\n=== Affichage du groupe ===" << std::endl;
+    std::cout << "Affichage du groupe" << std::endl;
     gestion.afficher("vacances",cout);
 
-    std::cout << "\n=== Lecture multimédias ===" << std::endl;
+    std::cout << " Lecture multimédias" << std::endl;
     gestion.jouer("clip");
     gestion.jouer("film");
 
-    std::cout << "\n=== Recherche inexistante ===" << std::endl;
+    std::cout << "Recherche inexistante" << std::endl;
     gestion.afficher("inconnu",cout);
     gestion.jouer("inconnu");
 
+    cout << "Suppression  multimédia plage <<<" << endl;
+    gestion.supprimerMultimedia("plage");
+
+    cout << "affichage du groupe après suppression de plage" << endl;
+    gestion.afficher("vacances", cout);
+
+    cout << "Suppression du groupe 'vacances' <<<" << endl;
+    gestion.supprimerGroup("vacances");
+
+    cout << "Tentative d'affichage d'un groupe supprimé" << endl;
+    gestion.afficher("vacances", cout);
+
+    cout << "\n>>> Fin du programme <<<" << endl;
+    return 0;
     return 0;
 }
 
