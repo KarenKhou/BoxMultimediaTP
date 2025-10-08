@@ -1,0 +1,6 @@
+multimedia.o: multimedia.cpp multimedia.h
+gestionmultimedia.o: gestionmultimedia.cpp gestionmultimedia.h \
+ multimedia.h groupe.h Photo.h Video.h film.h
+groupe.o: groupe.cpp groupe.h multimedia.h
+main.o: main.cpp multimedia.h Photo.h Video.h film.h groupe.h \
+ gestionmultimedia.h

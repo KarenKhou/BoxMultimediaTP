@@ -12,76 +12,74 @@
 \DoxyCodeLine{00013\ }
 \DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classFilm}{Film}}()\ :\ \mbox{\hyperlink{classVideo}{Video}}()\ \{\}}
 \DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classFilm}{Film}}(}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ nom,}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ fichier,}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ duree,}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}*\ tableau,}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nbrChapitres}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ )\ :}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVideo}{Video}}(nom,fichier,duree)}
-\DoxyCodeLine{00024\ \ \ \ \ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ copier(tableau,nbrChapitres);}
-\DoxyCodeLine{00026\ \ \ \ \ \}}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classFilm}{\string~Film}}()\{}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ tableauDuree;}
-\DoxyCodeLine{00030\ \ \ \ \ \}}
-\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classFilm_a68f781851622ec80878c9a6e7ccb925e}{Film}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFilm}{Film}}\&\ from)\ :\ \mbox{\hyperlink{classVideo}{Video}}(from)\{}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ nbrChapitres\ =\ from.nbrChapitres;}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ tableauDuree\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[nbrChapitres];}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i(0);i<nbrChapitres;i++)\{}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ tableauDuree[i]\ =\ from.tableauDuree[i];}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00043\ \ \ \ \ \}}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classFilm}{Film}}\&\ \mbox{\hyperlink{classFilm_ac0b358393c6e1d293141c5c96cd9a3be}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFilm}{Film}}\&\ from)\{}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ Video::operator=(from);}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tableauDuree\ \&\&\ from.tableauDuree)\ *tableauDuree\ =\ *from.tableauDuree;}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
-\DoxyCodeLine{00053\ \ \ \ \ \}}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFilm_a6343d4b1639fd65c39803871c9ba81bf}{sortie}}(ostream\ \&s)\textcolor{keyword}{\ const\ override}\{}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVideo_a14c15282cfbffd70839b4b6c18a9a3d8}{Video::sortie}}(s);}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ s\ <<\ \textcolor{stringliteral}{"{}Tableau\ des\ Durees:\ "{}};}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nbrChapitres;\ i++)\ \{}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ s\ <<\ tableauDuree[i]\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ s\ <<\ endl;}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classFilm_a353651e35b0544c4e6ac5508e691cd61}{Film}}(}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ nom,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ fichier,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ duree,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}*\ tableau,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nbrChapitres}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ )\ :}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVideo}{Video}}(nom,fichier,duree)}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ copier(tableau,nbrChapitres);}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classFilm_a8dab653f8a6c0635ca5ddbe0bbdd9a25}{\string~Film}}()\{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ tableauDuree;}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{classFilm_a68f781851622ec80878c9a6e7ccb925e}{Film}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFilm}{Film}}\&\ from)\ :\ \mbox{\hyperlink{classVideo}{Video}}(from)\{}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ nbrChapitres\ =\ from.nbrChapitres;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ tableauDuree\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[nbrChapitres];}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i(0);i<nbrChapitres;i++)\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ tableauDuree[i]\ =\ from.tableauDuree[i];}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{classFilm}{Film}}\&\ \mbox{\hyperlink{classFilm_ac0b358393c6e1d293141c5c96cd9a3be}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFilm}{Film}}\&\ from)\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ Video::operator=(from);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tableauDuree\ \&\&\ from.tableauDuree)\ *tableauDuree\ =\ *from.tableauDuree;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00062\ \ \ \ \ \}}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}*\ getTableauDuree()\textcolor{keyword}{\ const}\{}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tableauDuree;}
-\DoxyCodeLine{00066\ \ \ \ \ \}}
-\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ getnbrChapitres()\textcolor{keyword}{\ const}\{}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ nbrChapitres;}
-\DoxyCodeLine{00069\ \ \ \ \ \}}
-\DoxyCodeLine{00070\ \textcolor{comment}{//karen\ docu}}
-\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ setTableau(\textcolor{keywordtype}{int}*\ tab,\ \textcolor{keywordtype}{int}\ taille)\ \{}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ tableauDuree;}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ copier(tab,\ taille);}
-\DoxyCodeLine{00074\ \ \ \ \ \}}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00076\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}*\ tableauDuree\ =\ \textcolor{keyword}{nullptr};\ }
-\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ nbrChapitres\ =\ 0;\ }
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ copier(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ *\ tab,\ \textcolor{keywordtype}{int}\ taille)\ \{}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (taille>0\ \&\&\ tab!=\textcolor{keyword}{nullptr})\{}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ tableauDuree\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[taille];}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i(0);\ i<taille;\ i++)\{}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tableauDuree[i]=tab[i];}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ nbrChapitres\ =\ taille;}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}*\ tableauDuree\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nbrChapitres\ =\ 0;}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00092\ }
-\DoxyCodeLine{00093\ \ \ \ \ \}}
-\DoxyCodeLine{00094\ \};}
-\DoxyCodeLine{00095\ }
-\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FILM\_H}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFilm_a6343d4b1639fd65c39803871c9ba81bf}{sortie}}(ostream\ \&s)\textcolor{keyword}{\ const\ override}\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVideo_a14c15282cfbffd70839b4b6c18a9a3d8}{Video::sortie}}(s);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ s\ <<\ \textcolor{stringliteral}{"{}Tableau\ des\ Durees:\ "{}};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nbrChapitres;\ i++)\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ s\ <<\ tableauDuree[i]\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ s\ <<\ endl;}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}*\ getTableauDuree()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tableauDuree;}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ getnbrChapitres()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ nbrChapitres;}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFilm_ab4fc015b1c383b4ea07500e12b608e6f}{setTableau}}(\textcolor{keywordtype}{int}*\ tab,\ \textcolor{keywordtype}{int}\ taille)\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ tableauDuree;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ copier(tab,\ taille);}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}*\ tableauDuree\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ nbrChapitres\ =\ 0;\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ copier(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ *\ tab,\ \textcolor{keywordtype}{int}\ taille)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (taille>0\ \&\&\ tab!=\textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ tableauDuree\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[taille];}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i(0);\ i<taille;\ i++)\{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tableauDuree[i]=tab[i];}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ nbrChapitres\ =\ taille;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}*\ tableauDuree\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nbrChapitres\ =\ 0;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FILM\_H}}
 
 \end{DoxyCode}

@@ -1,4 +1,4 @@
-##########################################
+﻿##########################################
 #
 #  Exemple de Makefile
 #  Eric Lecolinet - Reda Dehak - Telecom ParisTech 2015
@@ -9,17 +9,25 @@
 #
 # Nom du programme
 #
-PROG = boxmulti
+
+PROG_BOX = boxmulti
+PROG_CLIENT = client
+PROG_SERVER = server
 
 #
 # Fichiers sources (NE PAS METTRE les .h ni les .o seulement les .cpp)
 #
-SOURCES = multimedia.cpp gestionmultimedia.cpp groupe.cpp main.cpp
+SOURCES_BOX = multimedia.cpp gestionmultimedia.cpp groupe.cpp main.cpp
+SOURCES_CLIENT = client.cpp ccsocket.cpp
+SOURCES_SERVER = server.cpp tcpserver.cpp ccsocket.cpp multimedia.cpp gestionmultimedia.cpp groupe.cpp
 
 #
 # Fichiers objets (ne pas modifier sauf si l'extension n'est pas .cpp)
 #
-OBJETS = ${SOURCES:%.cpp=%.o}
+#OBJETS = ${SOURCES:%.cpp=%.o}
+OBJETS_BOX = ${SOURCES_BOX:%.cpp=%.o}
+OBJETS_CLIENT = ${SOURCES_CLIENT:%.cpp=%.o}
+OBJETS_SERVER = ${SOURCES_SERVER:%.cpp=%.o}
 
 #
 # Compilateur C++
@@ -43,7 +51,7 @@ LDFLAGS =
 # Librairies a utiliser
 # Exemple: LDLIBS = -L/usr/local/qt/lib -lqt
 #
-LDLIBS = 
+LDLIBS = -lpthread
 
 
 ##########################################
@@ -52,13 +60,23 @@ LDLIBS =
 # depend-${PROG} sera un fichier contenant les dependances
 #
  
-all: ${PROG}
+all: $(PROG_BOX) $(PROG_CLIENT) $(PROG_SERVER)
+$(PROG_BOX): $(OBJETS_BOX)
+	$(CXX) $^ -o $@ $(LDFLAGS) $(LDLIBS)
 
-run: ${PROG}
-	./${PROG}
+$(PROG_CLIENT): $(OBJETS_CLIENT)
+	$(CXX) $^ -o $@ $(LDFLAGS) $(LDLIBS)
 
-${PROG}: depend-${PROG} ${OBJETS}
-	${CXX} -o $@ ${CXXFLAGS} ${LDFLAGS} ${OBJETS} ${LDLIBS}
+$(PROG_SERVER): $(OBJETS_SERVER)
+	$(CXX) $^ -o $@ $(LDFLAGS) $(LDLIBS)
+
+run-box: ./$(PROG_BOX)
+
+run-client: ./$(PROG_CLIENT)
+
+run-server: ./$(PROG_SERVER)
+
+
 
 clean:
 	-@$(RM) *.o depend-${PROG} core 1>/dev/null 2>&1

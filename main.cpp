@@ -19,59 +19,12 @@ using ptrPhoto = std::shared_ptr<Photo>;
 
 using namespace std;
 
+#define VERSION_CLIENTSERVEUR
 
 int main() {
-    GestionMultimedia gestion;
-
-    auto photo1 = gestion.newPhoto("plage", "plage.jpg", 43, 23);
-    auto photo2 = gestion.newPhoto("montagne", "montagne.jpg", 23, 2);
-
-    auto video1 = gestion.newVideo("clip", "clip.mp4", 33);
-
-    int chapitres[] = {10, 20, 30};
-    auto film1 = gestion.newFilm("film", "film.mp4", 60, chapitres, 3);
-
-    auto groupe1 = gestion.newGroup("vacances");
-    groupe1->push_back(photo1);
-    groupe1->push_back(video1);
-
-    cout << "Affichage des multimédias" <<endl;
-    gestion.afficher("plage",cout);
-    gestion.afficher("montagne",cout);
-    gestion.afficher("clip",cout);
-    gestion.afficher("film",cout);
-
-    cout << "Affichage du groupe" << endl;
-    gestion.afficher("vacances",cout);
-
-    cout << " Lecture multimédias" << endl;
-    gestion.jouer("clip");
-    gestion.jouer("film");
-
-    cout << "Recherche inexistante" << endl;
-    gestion.afficher("inconnu",cout);
-    gestion.jouer("inconnu");
-
-    cout << "Suppression  multimédia plage" << endl;
-    gestion.supprimerMultimedia("plage");
-
-    cout << "affichage du groupe après suppression de plage" << endl;
-    gestion.afficher("vacances", cout);
-
-    cout << "Suppression du groupe 'vacances' <<<" << endl;
-    gestion.supprimerGroup("vacances");
-
-    cout << "Tentative d'affichage d'un groupe supprimé" << endl;
-    gestion.afficher("vacances", cout);
-
-    return 0;
-}
-
-
-/*int main(int argc, const char* argv[])
-{
-   // main partie Polymorphisme
-   // attention repondre au questions
+#ifdef VERSION1
+    // main partie Polymorphisme
+    // attention repondre au questions
 
     Multimedia** unif =  new Multimedia*[10];
     unsigned int i = 0;
@@ -119,10 +72,10 @@ int main() {
 
     cout<<"Test partie 7"<<endl;
     Film film1("Rita",
-     "C:/Users/User/Videos/Screen Recordings/Screen Recording 2025-04-09 184047.mp4",
-     90,
-     tab1,
-     3);
+               "C:/Users/User/Videos/Screen Recordings/Screen Recording 2025-04-09 184047.mp4",
+               90,
+               tab1,
+               3);
     film1.sortie(cout);
 
     Film film2(film1);
@@ -150,14 +103,54 @@ int main() {
 
     g1.afficher(cout);
     g2.afficher(cout);
+#endif
+#ifdef VERSION2
+    GestionMultimedia gestion;
 
+    auto photo1 = gestion.newPhoto("plage", "plage.jpg", 43, 23);
+    auto photo2 = gestion.newPhoto("montagne", "montagne.jpg", 23, 2);
 
+    auto video1 = gestion.newVideo("clip", "clip.mp4", 33);
 
+    int chapitres[] = {10, 20, 30};
+    auto film1 = gestion.newFilm("film", "film.mp4", 60, chapitres, 3);
 
+    auto groupe1 = gestion.newGroup("vacances");
+    groupe1->push_back(photo1);
+    groupe1->push_back(video1);
+
+    cout << "Affichage des multimédias" <<endl;
+    gestion.afficher("plage",cout);
+    gestion.afficher("montagne",cout);
+    gestion.afficher("clip",cout);
+    gestion.afficher("film",cout);
+
+    cout << "Affichage du groupe" << endl;
+    gestion.afficher("vacances",cout);
+
+    cout << " Lecture multimédias" << endl;
+    gestion.jouer("clip");
+    gestion.jouer("film");
+
+    cout << "Recherche inexistante" << endl;
+    gestion.afficher("inconnu",cout);
+    gestion.jouer("inconnu");
+
+    cout << "Suppression  multimédia plage" << endl;
+    gestion.supprimerMultimedia("plage");
+
+    cout << "affichage du groupe après suppression de plage" << endl;
+    gestion.afficher("vacances", cout);
+
+    cout << "Suppression du groupe 'vacances' <<<" << endl;
+    gestion.supprimerGroup("vacances");
+
+    cout << "Tentative d'affichage d'un groupe supprimé" << endl;
+    gestion.afficher("vacances", cout);
 
     return 0;
-}*/
+#endif
+#ifdef VERSION_CLIENTSERVEUR
 
-
-// g++ main.cpp Multimedia.cpp -o programme
-// .\programme.exe
+#endif
+}
