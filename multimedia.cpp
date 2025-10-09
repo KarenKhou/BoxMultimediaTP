@@ -1,4 +1,6 @@
 #include "multimedia.h"
+#include "Photo.h"
+#include "Video.h"
 #include <iostream>
 using namespace std;
 
@@ -29,3 +31,19 @@ void Multimedia::sortie(ostream &s ) const{
     s <<"Nom: "<< nom << " - Fichier: "<< fichier << endl;
 }
 
+void Multimedia::write(ostream &s) const{
+    s<<nom<<'\n'<<fichier<<'\n';
+}
+
+void Multimedia::read(istream &s) {
+    getline(s,nom);
+    getline(s,fichier);
+}
+Multimedia* createMultimedia(const std::string& className) {
+    if (className == "Photo")
+        return new Photo();
+    else if (className == "Video")
+        return new Video();
+    else
+        return nullptr;
+}

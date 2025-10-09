@@ -2,6 +2,7 @@
 #define MULTIMEDIA_H
 
 #include <iostream>
+
 using namespace std;
 
 /**
@@ -53,8 +54,13 @@ public:
 
     virtual void sortie(ostream &s) const;
     virtual void jouer() const = 0;
-
-
+    ///fct pour serialiser les objects
+    virtual void write(ostream &s) const ;
+    ///fct pour deserealiser les objects
+    virtual void read(istream &s)  ;
+    ///fct qui specifie le type de la classe
+    virtual string className() const =0;
+    Multimedia* createMultimedia(const std::string& className);
 private:
     string nom{};
     string fichier{};

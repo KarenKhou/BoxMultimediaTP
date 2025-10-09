@@ -17,7 +17,7 @@ PROG_SERVER = server
 #
 # Fichiers sources (NE PAS METTRE les .h ni les .o seulement les .cpp)
 #
-SOURCES_BOX = multimedia.cpp gestionmultimedia.cpp groupe.cpp main.cpp
+SOURCES_BOX = multimedia.cpp gestionmultimedia.cpp groupe.cpp main.cpp tcpserver.cpp ccsocket.cpp
 SOURCES_CLIENT = client.cpp ccsocket.cpp
 SOURCES_SERVER = server.cpp tcpserver.cpp ccsocket.cpp multimedia.cpp gestionmultimedia.cpp groupe.cpp
 

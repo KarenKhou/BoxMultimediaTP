@@ -1,3 +1,5 @@
+Manager.cpp
+Manager.h
 Photo.h
 Video.h
 film.cpp

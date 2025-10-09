@@ -1,6 +1,7 @@
 #ifndef PHOTO_H
 #define PHOTO_H
 #include "multimedia.h"
+using namespace std;
 
 /**
  * @brief Classe Photo qui herite de Multimedia,
@@ -10,6 +11,7 @@
 class  Photo : public Multimedia {
     friend class GestionMultimedia;
 public:
+    Photo(): Multimedia() {}
     /**
      * @brief Constructeur de Photo
      * @param nom attibut herite de multimedia : nom de la photo
@@ -41,6 +43,10 @@ public:
     void setLongitude (float longitude) {
         this->longitude = longitude;
     }
+
+    string className() const override{
+        return "Photo";
+    }
     /**
      * @brief sortie : fonction d'affichage, appelle la fct Multimedia::sortie(s)
      * @param s : reference vers un stream de donnees
@@ -59,6 +65,19 @@ public:
         system(command.data());
     }
 
+    void write(ostream &s) const override{
+        Multimedia::write(s);
+        s << latitude <<'\n'<< longitude << '\n';
+    }
+    void read(istream &s)  override{
+        Multimedia::read(s);
+        string lat;
+        string lon;
+        getline(s,lat);
+        getline(s,lon);
+        latitude = stof(lat);
+        longitude = stof(lon);
+    }
 
 
 private:

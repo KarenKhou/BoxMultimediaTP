@@ -7,6 +7,8 @@
 #include "Video.h"
 #include "film.h"
 #include <memory>
+#include <fstream>
+#include <vector>
 
 using namespace std;
 using ptrPhoto = shared_ptr<Photo>;
@@ -68,10 +70,69 @@ public:
     bool supprimerGroup(const std::string& nom);
 
 
+
+
 private:
     map<string,ptrMulti> dictMultimedia; /// dictionnaire contenant l'integralite des multimedias
     map<string,ptrGroup> dictGroup; ///dictionnaire contenant l'integralite des groupes.
 
 };
+
+/**
+ * @brief saveAll
+ * @param filename
+ * @param objects
+ * @return
+ */
+bool saveAll(const std::string &filename, const std::vector<Multimedia *> &objects) {
+    std::ofstream f(filename);
+    if (!f) {
+        std::cerr << "Can't open file " << filename << std::endl;
+        return false;
+    }
+
+    for (auto it : objects) {
+        f << it->className();
+        it->write(f);
+        if (f.fail()) {
+            std::cerr << "Write error in " << filename << std::endl;
+            return false;
+        }
+    }
+    return true;
+}
+
+
+
+bool readAll(const std::string &filename, std::vector<Multimedia *> &objects) {
+    std::ifstream f(filename);
+    if (!f) {
+        std::cerr << "Can't open file " << filename << std::endl;
+        return false;
+    }
+
+    while (f) {
+        std::string className;
+        std::getline(f, className);
+        if (className.empty()) break;
+
+        Multimedia *obj = createMultimedia(className);
+        if (!obj) {
+            std::cerr << "Unknown class name: " << className << std::endl;
+            return false;
+        }
+
+        obj->read(f);
+        if (f.fail()) {
+            std::cerr << "Read error in " << filename << std::endl;
+            delete obj;
+            return false;
+        } else {
+            objects.push_back(obj);
+        }
+    }
+    return true;
+}
+
 
 #endif // GESTIONMULTIMEDIA_H

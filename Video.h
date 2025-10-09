@@ -41,9 +41,23 @@ public:
         system(command.data());
     }
 
+    string className() const override{
+        return "Video";
+    }
+
+    void write(ostream &s) const override{
+        Multimedia::write(s);
+        s<<duree<<'\n';
+    }
+
+    void read(istream &s)  override{
+        Multimedia::read(s);
+        string d;
+        getline(s,d);
+        duree=stoi(d);
+    }
+
 private:
     int duree; /// duree de la video
-
-
 };
 #endif
