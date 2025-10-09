@@ -60,7 +60,7 @@ public:
     virtual void read(istream &s)  ;
     ///fct qui specifie le type de la classe
     virtual string className() const =0;
-    Multimedia* createMultimedia(const std::string& className);
+
 private:
     string nom{};
     string fichier{};

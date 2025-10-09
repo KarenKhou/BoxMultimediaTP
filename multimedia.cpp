@@ -1,6 +1,5 @@
 #include "multimedia.h"
-#include "Photo.h"
-#include "Video.h"
+
 #include <iostream>
 using namespace std;
 
