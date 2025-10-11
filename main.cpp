@@ -235,6 +235,8 @@ int main() {
         auto photo2 = gestion.newPhoto("montagne", "montagne.jpg", 23, 2);
 
         auto video1 = gestion.newVideo("clip", "clip.mp4", 33);
+        int chapitres[] = {10, 20, 30};
+        auto film1 = gestion.newFilm("film", "film.mp4", 60, chapitres, 3);
 
 
         gestion.saveAll("serFile.txt");
@@ -246,6 +248,7 @@ int main() {
         gestion.afficher("plage",cout);
         gestion.afficher("montagne",cout);
         gestion.afficher("clip",cout);
+        gestion.afficher("film",cout);
 
 
 

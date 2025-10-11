@@ -2,6 +2,8 @@
 #define FILM_H
 
 #include "Video.h"
+#include <sstream>
+
 using namespace std;
 /**
  * @brief Classe Film qui herite de Video
@@ -86,6 +88,37 @@ public:
         delete[] tableauDuree;
         copier(tab, taille);
     }
+    string className() const override{
+        return "Film";
+    }
+
+    void write(ostream &s) const override {
+        Video::write(s);
+        s << nbrChapitres << '\n';
+
+        for (int i = 0; i < nbrChapitres; i++) {
+            s << tableauDuree[i] << " ";
+        }
+        s << '\n';
+    }
+    void read(istream &s) override {
+        Video::read(s);
+
+        string line;
+        getline(s, line);
+        nbrChapitres = stoi(line);
+
+        getline(s, line);
+        delete[] tableauDuree;
+        tableauDuree = new int[nbrChapitres];
+
+        istringstream iss(line);
+        for (int i = 0; i < nbrChapitres; i++) {
+            iss >> tableauDuree[i];
+        }
+    }
+
+
 
 private:
 
