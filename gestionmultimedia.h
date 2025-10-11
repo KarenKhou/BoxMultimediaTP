@@ -9,6 +9,7 @@
 #include <memory>
 #include <fstream>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 using ptrPhoto = shared_ptr<Photo>;
@@ -53,6 +54,7 @@ public:
 
     void afficher(string nom,ostream& s);
 
+
     bool jouer(string nom);
     /**
      * @brief supprimerMultimedia supprime un objet multimedia du dictionnaire dictMulti,
@@ -69,6 +71,30 @@ public:
      */
     bool supprimerGroup(const std::string& nom);
 
+    /**
+     * @brief createMultimedia est une factory method qui va creer elle meme les nouveaux objects
+     * @param className
+     * @return
+     */
+    ptrMulti createMultimedia(const std::string& className);
+
+    /**
+     * @brief saveAll Fonction qui serialise tout les object contenu dans dictMulti dans le fichier "filename"
+     * @param filename
+     * @param objects
+     * @return
+     */
+    bool saveAll(const std::string &filename);
+
+
+
+    /**
+     * @brief readAll Fonction qui lit les objects du fichier, et les met dans dictMulti
+     * @param filename
+     * @return
+     */
+    bool readAll(const std::string &filename);
+
 
 
 
@@ -77,62 +103,6 @@ private:
     map<string,ptrGroup> dictGroup; ///dictionnaire contenant l'integralite des groupes.
 
 };
-
-/**
- * @brief saveAll
- * @param filename
- * @param objects
- * @return
- */
-bool saveAll(const std::string &filename, const std::vector<Multimedia *> &objects) {
-    std::ofstream f(filename);
-    if (!f) {
-        std::cerr << "Can't open file " << filename << std::endl;
-        return false;
-    }
-
-    for (auto it : objects) {
-        f << it->className();
-        it->write(f);
-        if (f.fail()) {
-            std::cerr << "Write error in " << filename << std::endl;
-            return false;
-        }
-    }
-    return true;
-}
-
-
-
-bool readAll(const std::string &filename, std::vector<Multimedia *> &objects) {
-    std::ifstream f(filename);
-    if (!f) {
-        std::cerr << "Can't open file " << filename << std::endl;
-        return false;
-    }
-
-    while (f) {
-        std::string className;
-        std::getline(f, className);
-        if (className.empty()) break;
-
-        Multimedia *obj = createMultimedia(className);
-        if (!obj) {
-            std::cerr << "Unknown class name: " << className << std::endl;
-            return false;
-        }
-
-        obj->read(f);
-        if (f.fail()) {
-            std::cerr << "Read error in " << filename << std::endl;
-            delete obj;
-            return false;
-        } else {
-            objects.push_back(obj);
-        }
-    }
-    return true;
-}
 
 
 #endif // GESTIONMULTIMEDIA_H

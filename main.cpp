@@ -20,7 +20,7 @@ using ptrPhoto = std::shared_ptr<Photo>;
 
 using namespace std;
 
-#define VERSION_CLIENTSERVEUR
+#define VERSION_SERIALISATION
 
 int main() {
 #ifdef VERSION1
@@ -143,7 +143,7 @@ int main() {
     cout << "affichage du groupe après suppression de plage" << endl;
     gestion.afficher("vacances", cout);
 
-    cout << "Suppression du groupe 'vacances' <<<" << endl;
+    cout << "Suppression du groupe 'vacances'" << endl;
     gestion.supprimerGroup("vacances");
 
     cout << "Tentative d'affichage d'un groupe supprimé" << endl;
@@ -225,5 +225,51 @@ int main() {
 
         return 0;
 
+#endif
+
+#ifdef VERSION_SERIALISATION
+
+        GestionMultimedia gestion;
+
+        auto photo1 = gestion.newPhoto("plage", "plage.jpg", 43, 23);
+        auto photo2 = gestion.newPhoto("montagne", "montagne.jpg", 23, 2);
+
+        auto video1 = gestion.newVideo("clip", "clip.mp4", 33);
+
+
+        gestion.saveAll("serFile.txt");
+
+        //gestion.readAll("serFile.txt");
+
+
+        cout << "Affichage des multimédias" <<endl;
+        gestion.afficher("plage",cout);
+        gestion.afficher("montagne",cout);
+        gestion.afficher("clip",cout);
+
+
+
+
+        cout << " Lecture multimédias" << endl;
+        gestion.jouer("clip");
+
+
+        cout << "Recherche inexistante" << endl;
+        gestion.afficher("inconnu",cout);
+        gestion.jouer("inconnu");
+
+        cout << "Suppression  multimédia plage" << endl;
+        gestion.supprimerMultimedia("plage");
+
+        cout << "affichage du groupe après suppression de plage" << endl;
+        gestion.afficher("vacances", cout);
+
+        cout << "Suppression du groupe 'vacances'" << endl;
+        gestion.supprimerGroup("vacances");
+
+        cout << "Tentative d'affichage d'un groupe supprimé" << endl;
+        gestion.afficher("vacances", cout);
+
+        return 0;
 #endif
 }

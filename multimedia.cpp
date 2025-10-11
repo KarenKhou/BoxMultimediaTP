@@ -38,11 +38,4 @@ void Multimedia::read(istream &s) {
     getline(s,nom);
     getline(s,fichier);
 }
-Multimedia* createMultimedia(const std::string& className) {
-    if (className == "Photo")
-        return new Photo();
-    else if (className == "Video")
-        return new Video();
-    else
-        return nullptr;
-}
+

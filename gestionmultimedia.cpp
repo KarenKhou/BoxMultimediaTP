@@ -39,7 +39,6 @@ ptrGroup GestionMultimedia::newGroup(string nom) {
 ptrMulti GestionMultimedia::rechercherMultimedia(string nom){
     auto it = dictMultimedia.find(nom);
     if (it == dictMultimedia.end()) {
-        std::cout << "pas trouvé dans MULTIMEDIA DICT" << std::endl;
         return nullptr;
     } else {
         return it->second;
@@ -49,7 +48,6 @@ ptrMulti GestionMultimedia::rechercherMultimedia(string nom){
 ptrGroup GestionMultimedia::rechercherGroup(string nom){
     auto it = dictGroup.find(nom);
     if (it == dictGroup.end()) {
-        std::cout << "pas trouvé dans GROUP DICT" << std::endl;
         return nullptr;
     } else {
         return it->second;
@@ -104,5 +102,57 @@ bool GestionMultimedia::supprimerMultimedia(const std::string& nom){
         return true;
     }
     return false;
+}
+
+ptrMulti GestionMultimedia::createMultimedia(const std::string& className) {
+    if (className == "Photo")
+        return shared_ptr<Photo>(new Photo());
+    else if (className == "Video")
+        return shared_ptr<Video>(new Video());
+    else if (className == "Film")
+        return shared_ptr<Film>(new Film());
+    else
+        return nullptr;
+}
+
+bool GestionMultimedia::saveAll(const std::string &filename) {
+    std::ofstream f(filename);
+    if (!f) {
+        std::cerr << "Can't open file " << filename << std::endl;
+        return false;
+    }
+
+    for (const auto & [nom, obj] : dictMultimedia) {
+        f << obj->className() <<'\n';
+        obj->write(f);
+        if (f.fail()) {
+            std::cerr << "Write error in " << filename << std::endl;
+            return false;
+        }
+    }
+    std::cout<<"Write done"<<std::endl;
+    return true;
+}
+bool GestionMultimedia::readAll(const std::string &filename) {
+    std::ifstream f(filename);
+    if (!f) {
+        std::cerr << "Can't open file " << filename << std::endl;
+        return false;
+    }
+
+    while (f) {
+        std::string className;
+        std::getline(f, className);
+        if (className.empty()) break;
+
+        ptrMulti obj = createMultimedia(className);
+        if (!obj) {
+            std::cerr << "Unknown class name: " << className << std::endl;
+            return false;
+        }
+        obj->read(f);
+        dictMultimedia[obj->getNom()] = obj;
+    }
+    return true;
 }
 
