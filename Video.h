@@ -2,6 +2,7 @@
 #define VIDEO_H
 
 #include "multimedia.h"
+#include "ErreurKaren.h"
 /**
  * @brief Classe Video qui herite de Multimedia
  * on declare GestionMultimedia friend, afin que cette derniere puisse acceder a son constructeur desormais prive
@@ -20,7 +21,11 @@ public:
         string fichier,
         int duree
         )
-        : Multimedia(nom,fichier),duree(duree){}
+        : Multimedia(nom,fichier),duree(duree){
+        if (duree <= 0){
+            throw tailleInvalide("Duree d'une video ne peut pas etre <=0");
+        }
+    }
     /**
      * @brief sortie : fonction d'affichage, appelle la fct Multimedia::sortie(s)
      * @param s : reference vers un stream de donnees

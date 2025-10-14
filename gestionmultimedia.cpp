@@ -1,10 +1,14 @@
 #include "gestionmultimedia.h"
 
 GestionMultimedia::GestionMultimedia() {}
+
 ptrPhoto GestionMultimedia::newPhoto(string nom,
                   string fichier,
                   float latitude,
                   float longitude){
+    if(this->rechercherMultimedia(nom)){
+        throw nomInvalide("Nom Multimedia deja existant");
+    }
     ptrPhoto k(new Photo(nom,fichier,latitude,longitude));
     dictMultimedia[nom] = k;
     return k;
@@ -13,6 +17,9 @@ ptrPhoto GestionMultimedia::newPhoto(string nom,
 ptrVideo GestionMultimedia::newVideo(string nom,
                   string fichier,
                  float duree){
+    if(this->rechercherMultimedia(nom)){
+        throw nomInvalide("Nom Multimedia deja existant");
+    }
     ptrVideo k(new Video(nom,fichier,duree));
     dictMultimedia[nom] = k;
     return k;
@@ -24,12 +31,18 @@ ptrFilm GestionMultimedia::newFilm(string nom,
                  int duree,
                  int* tableau,
                 int nbrChapitres){
+    if(this->rechercherMultimedia(nom)){
+        throw nomInvalide("Nom Multimedia deja existant");
+    }
     ptrFilm k(new Film(nom,fichier,duree,tableau,nbrChapitres));
     dictMultimedia[nom] = k;
     return k;
 }
 
 ptrGroup GestionMultimedia::newGroup(string nom) {
+    if(this->rechercherGroup(nom)){
+        throw nomInvalide("Nom Groupe deja existant");
+    }
     ptrGroup k = ptrGroup(new Groupe(nom));
     dictGroup[nom] = k;
     return k;
@@ -79,7 +92,12 @@ bool GestionMultimedia::jouer(string nom){
     }
     return false;
 }
-
+/**
+ * @brief GestionMultimedia::supprimerGroup Dans cette fonction on decide de gerer la suppression d'un dictionnaire non existant
+ * de maniere raisonnable : on renvoie un bool false si le dictionnaire n'existe pas.
+ * @param nom
+ * @return
+ */
 bool GestionMultimedia::supprimerGroup(const std::string& nom){
     auto it = dictGroup.find(nom);
     if(it != dictGroup.end()){

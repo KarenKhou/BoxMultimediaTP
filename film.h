@@ -2,6 +2,7 @@
 #define FILM_H
 
 #include "Video.h"
+#include "ErreurKaren.h"
 #include <sstream>
 
 using namespace std;
@@ -32,7 +33,11 @@ public:
         ) :
         Video(nom,fichier,duree)
     {
+        if (nbrChapitres<=0){
+            throw tailleInvalide("Le nombre de chapitre d'un film ne peux pas etre <=0");
+        }
         copier(tableau,nbrChapitres);
+
     }
 
     /// Destructeur pour chaque new on doit delete pour eviter les fuites de memoires

@@ -241,6 +241,7 @@ int main() {
 
         gestion.saveAll("serFile.txt");
 
+
         //gestion.readAll("serFile.txt");
 
 
@@ -250,28 +251,34 @@ int main() {
         gestion.afficher("clip",cout);
         gestion.afficher("film",cout);
 
+        // //test operateur << et >>
+        // auto p1 = gestion.newPhoto("karenphoto","")
+        // std::ofstream fout("save.txt");
+        // if (fout) {
+        //     fout << p1;
+        // }
 
+        // Photo p2;
+        // std::ifstream fin("save.txt");
+        // if (fin) {
+        //     fin >> p2;
+        // }
 
+        // std::cout << "Objet relu : " << p2 << std::endl;
 
-        cout << " Lecture multimédias" << endl;
-        gestion.jouer("clip");
+        // test throwing error
+        // try{
+        //      auto p1 = gestion.newPhoto("karen","/k",10,10);
+        // }
+        // catch
+        // auto p1 = gestion.newPhoto("karen","/k",10,10);
+        // auto p2 = gestion.newPhoto("karen","/k",10,10);
 
+        //auto p3 = gestion.newPhoto("ka/ren","/k",10,10);
 
-        cout << "Recherche inexistante" << endl;
-        gestion.afficher("inconnu",cout);
-        gestion.jouer("inconnu");
+        //auto film5 = gestion.newFilm("testfilm","/ll",-9,chapitres,3);
+        //auto film6 = gestion.newFilm("hi","/ll",90,chapitres,-9);
 
-        cout << "Suppression  multimédia plage" << endl;
-        gestion.supprimerMultimedia("plage");
-
-        cout << "affichage du groupe après suppression de plage" << endl;
-        gestion.afficher("vacances", cout);
-
-        cout << "Suppression du groupe 'vacances'" << endl;
-        gestion.supprimerGroup("vacances");
-
-        cout << "Tentative d'affichage d'un groupe supprimé" << endl;
-        gestion.afficher("vacances", cout);
 
         return 0;
 #endif

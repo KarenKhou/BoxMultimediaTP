@@ -40,7 +40,7 @@ class Multimedia
 public:
     Multimedia();
     /**
-     * @brief constructeur Multimedia
+     * @brief constructeur Multimedia, throws une exception de type nomInvalide si le nom contient autre chose que des lettres, chiffres, _ et -
      * @param nom Nom de l'objet
      * @param fichier Chemin vers la resource
      */
@@ -60,6 +60,14 @@ public:
     virtual void read(istream &s)  ;
     ///fct qui specifie le type de la classe
     virtual string className() const =0;
+
+    ///overload de l'operateur << et >> pour effectuer la serialisation
+    friend std::ostream& operator<<(std::ostream& os, const Multimedia& obj);
+    friend std::istream& operator>>(std::istream& is, Multimedia& obj);
+
+
+
+
 
 private:
     string nom{};
