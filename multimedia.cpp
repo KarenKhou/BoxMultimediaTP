@@ -2,9 +2,12 @@
 
 #include <iostream>
 #include <cctype>
+#include <memory>
 #include "ErreurKaren.h"
+#include  "gestionmultimedia.h"
 
 using namespace std;
+
 
 
 Multimedia::Multimedia() {}
@@ -44,16 +47,6 @@ void Multimedia::write(ostream &s) const{
 void Multimedia::read(istream &s) {
     getline(s,nom);
     getline(s,fichier);
-}
-
-std::ostream& operator<<(std::ostream& os, const Multimedia& obj) {
-    obj.write(os);
-    return os;
-}
-
-std::istream& operator>>(std::istream& is, Multimedia& obj){
-    obj.read(is);
-    return is;
 }
 
 

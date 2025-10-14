@@ -181,3 +181,29 @@ bool GestionMultimedia::readAll(const std::string &filename) {
     return true;
 }
 
+ std::ostream& operator<<(std::ostream& f, const GestionMultimedia& gestion){
+    for (const auto & [nom, obj] : gestion.dictMultimedia) {
+        f << obj->className() <<'\n';
+        obj->write(f);
+        if (f.fail()) {
+            std::cerr << "Write error"<< std::endl;
+        }
+    }
+    return f;
+}
+ std::istream& operator>>(std::istream& f, GestionMultimedia& g){
+    while (f) {
+        std::string className;
+        std::getline(f, className);
+        if (className.empty()) break;
+
+        ptrMulti obj = g.createMultimedia(className);
+        if (!obj) {
+            std::cerr << "Unknown class name: " << className << std::endl;
+        }
+        obj->read(f);
+        g.dictMultimedia[obj->getNom()] = obj;
+    }
+    return  f;
+}
+

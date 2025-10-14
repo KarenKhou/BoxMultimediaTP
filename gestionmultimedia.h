@@ -99,6 +99,9 @@ public:
      */
     bool readAll(const std::string &filename);
 
+    friend std::ostream& operator<<(std::ostream& os, const GestionMultimedia& g);
+    friend std::istream& operator>>(std::istream& is, GestionMultimedia& g);
+
 
 
 

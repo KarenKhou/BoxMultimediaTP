@@ -20,7 +20,7 @@ using ptrPhoto = std::shared_ptr<Photo>;
 
 using namespace std;
 
-#define VERSION_GESTIONERREUR
+#define VERSION_SERIALISATION
 
 int main() {
 #ifdef VERSION1
@@ -231,6 +231,8 @@ int main() {
 
         GestionMultimedia gestion;
 
+
+
         auto photo1 = gestion.newPhoto("plage", "plage.jpg", 43, 23);
         auto photo2 = gestion.newPhoto("montagne", "montagne.jpg", 23, 2);
 
@@ -238,11 +240,17 @@ int main() {
         int chapitres[] = {10, 20, 30};
         auto film1 = gestion.newFilm("film", "film.mp4", 60, chapitres, 3);
 
+        // std::ofstream out("save.txt");
+        // out << gestion;   // Sauvegarde complète
 
-        gestion.saveAll("serFile.txt");
+        std::ifstream in("save.txt");
+        in >> gestion;    // Lecture complète
 
 
-        //gestion.readAll("serFile.txt");
+        // gestion.saveAll("serFile.txt");
+
+
+        // //gestion.readAll("serFile.txt");
 
 
         cout << "Affichage des multimédias" <<endl;
@@ -251,20 +259,6 @@ int main() {
         gestion.afficher("clip",cout);
         gestion.afficher("film",cout);
 
-        // //test operateur << et >>
-        // auto p1 = gestion.newPhoto("karenphoto","")
-        // std::ofstream fout("save.txt");
-        // if (fout) {
-        //     fout << p1;
-        // }
-
-        // Photo p2;
-        // std::ifstream fin("save.txt");
-        // if (fin) {
-        //     fin >> p2;
-        // }
-
-        // std::cout << "Objet relu : " << p2 << std::endl;
 
 
         return 0;

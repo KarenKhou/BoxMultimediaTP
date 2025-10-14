@@ -61,14 +61,6 @@ public:
     ///fct qui specifie le type de la classe
     virtual string className() const =0;
 
-    ///overload de l'operateur << et >> pour effectuer la serialisation
-    friend std::ostream& operator<<(std::ostream& os, const Multimedia& obj);
-    friend std::istream& operator>>(std::istream& is, Multimedia& obj);
-
-
-
-
-
 private:
     string nom{};
     string fichier{};
