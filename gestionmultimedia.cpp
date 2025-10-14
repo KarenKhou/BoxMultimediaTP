@@ -67,15 +67,22 @@ ptrGroup GestionMultimedia::rechercherGroup(string nom){
     }
 }
 
-void GestionMultimedia::afficher(string nom, ostream& s){
+/**
+ * @brief GestionMultimedia::afficher Gestion d'erreur: On renvoie un bool qui indique si l'affichage a eu lieu ou  non
+ * @param nom
+ * @param s
+ * @return
+ */
+bool GestionMultimedia::afficher(string nom, ostream& s){
     if (auto group =rechercherGroup(nom)){
         group->afficher(s);
-        return;
+        return  true;
     }
     if (auto multi = rechercherMultimedia(nom)){
         multi->sortie(s);
-        return;
+        return  true;
     }
+    return  false;
 
 }
 

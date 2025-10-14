@@ -20,7 +20,7 @@ using ptrPhoto = std::shared_ptr<Photo>;
 
 using namespace std;
 
-#define VERSION_SERIALISATION
+#define VERSION_GESTIONERREUR
 
 int main() {
 #ifdef VERSION1
@@ -266,20 +266,45 @@ int main() {
 
         // std::cout << "Objet relu : " << p2 << std::endl;
 
-        // test throwing error
-        // try{
-        //      auto p1 = gestion.newPhoto("karen","/k",10,10);
-        // }
-        // catch
-        // auto p1 = gestion.newPhoto("karen","/k",10,10);
-        // auto p2 = gestion.newPhoto("karen","/k",10,10);
-
-        //auto p3 = gestion.newPhoto("ka/ren","/k",10,10);
-
-        //auto film5 = gestion.newFilm("testfilm","/ll",-9,chapitres,3);
-        //auto film6 = gestion.newFilm("hi","/ll",90,chapitres,-9);
-
 
         return 0;
+#endif
+#ifdef  VERSION_GESTIONERREUR
+        //test throwing error
+
+        try{
+            GestionMultimedia gestion;
+            int chapitres[] = {10, 20, 30};
+
+            //gestion raisonnable des erreurs
+            if(gestion.afficher("inconnu",cout)){
+                cout<<"affichage reussit"<<endl;
+            }else{
+                cout<<"Affchage non aboutit"<<endl;
+            }
+
+
+            auto p1 = gestion.newPhoto("karen","/k",10,10);
+            auto p2 = gestion.newPhoto("karen","/k",10,10);//Nom Invalide: Nom Multimedia deja existant
+            auto p3 = gestion.newPhoto("ka/ren","/k",10,10);//Nom Invalide: Seule les chiffres, lettre, - et _ sont autorises
+
+            auto film5 = gestion.newFilm("testfilm","/ll",-9,chapitres,3);//Taille Invalide : Duree d'une video ne peut pas etre <=0
+            auto film6 = gestion.newFilm("hi","/ll",90,chapitres,-9);//Taille Invalide : Le nombre de chapitre d'un film ne peux pas etre <=0
+            return  0;
+        }
+        catch(nomInvalide &e ){
+            cerr<<"Nom Invalide: "<<e.what()<<endl;
+        }
+        catch(tailleInvalide &e ){
+            cerr<<"Taille Invalide : "<< e.what()<< endl;
+        }
+        catch(...){
+            cerr<<"Autre erreur : "<<endl;
+        }
+
+
+
+
+
 #endif
 }

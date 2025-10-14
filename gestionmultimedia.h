@@ -52,13 +52,17 @@ public:
     ptrMulti rechercherMultimedia(string nom);
     ptrGroup rechercherGroup(string nom);
 
-    void afficher(string nom,ostream& s);
+    bool afficher(string nom,ostream& s);
 
 
     bool jouer(string nom);
+
+
     /**
      * @brief supprimerMultimedia supprime un objet multimedia du dictionnaire dictMulti,
      * et de tout les groupes. L'objet est detruit automatiquement car on utilise les smarts pointers.
+     * on decide de gerer la suppression d'un multimedia non existant
+     * de maniere raisonnable : on renvoie un bool false si le dictionnaire n'existe pas.
      * @param nom du multimedia a supprimer
      * @return flag de succes
      */
